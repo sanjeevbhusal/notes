@@ -1,0 +1,583 @@
+NameSpace and Scope in Python
+Everything in python is an object. Namespaces are the structures which are used to organize the names assigned to an object in a python program.
+
+Namespace is a collection of currently defined variables/namess along wth the object referenced by the name.
+
+A python prgram has 4 kind of namesapces.
+1) Built-In
+2) Global
+3) Enclosing
+4) Local
+
+All these namespaces have different lifetimes. While executing a program, Python creates a namespace as necessary and also deletes the namespace when it is no longer needed.
+
+Builtin namesapce
+
+Builtin namespace contains all python's builtin objects referenced by their name. These objects are available at all times when python is running. To see all builtin namespace objects, use "dir(___builtins__)".
+
+Python Interpreter creates a builtin namespace when it starts up. This namespace remains in existence untill interpreter is running.
+
+Global namespace
+Global Namespce contains any variables/names defined at the top level of the program. Each module which is executed by python will have its own global namespace.
+
+
+Local namespace
+Local Namesapce are created whenever python interpreter executes a function.  
+That namespace is local to that function and remains in existence untill the function ends.
+
+Enclosing namespace
+If a function A is defined within another function B, the namespace of B becomes the enclosing namespace of A.
+
+def B():
+    print("I am B function")
+
+    def A():
+        print("I am A function")
+    
+    A().
+
+
+Existence of all these different namespaces means, same names/variables can refer to different objects as long as the variables are defined in different namespaces.
+
+
+Scope:
+Every variable/name has a scope associated with it. Scope determines from which region of the code, you can access that variable. A variable defined in the function has a function scope i.e., you cannot access that variable from outside that function. If a variable is defined in a global scope, the variable can be accessed anywhere in the program.
+
+Main.py
+# some code
+x = 8
+def A():
+    x = 5
+    print(x)
+    
+    def B():
+        x = 6
+A()
+#some code
+
+
+But what if there is a variable defined in global namespace, enclosing namespace and even a local namesapce. Now, if we access the variable, how does python know from which namespace it should serve the variable's value? This is defined in LEGB rule.
+
+LEGB Rule:
+Whenever user access a certain name/variable, python interpreter first checks the local scope of the varibale. If the variable is defined inside a function A, interpreter checks the local scope of the function A. If the value is not available in the local namespace, but funtion A is inside another function B, then the interpreter checks the namespace of function B i.e. eclosing namespace.
+If the variable is still not avaibale in any of the above namespace, interpreter checks for global namespace. If the variable is still not available in global namespace, then interpreter checks for the variable in builtin namesapce. 
+If the variable is still  not found, python raises a NameError Exception
+
+
+
+# Namespace data structure
+Global and Local Namespace are represented as a dictionary but the builtin namespace is represented as a module.
+
+# globals() and locals()
+They are builin function which allows users to access local and global namespace dictionaries.
+globals function returns a reference to the current global namespace dictionary.
+Whenever the program starts, depending upon Python version and Operating system, python interpreter will put different entries on the global namespace.
+locals function returns the function's local namespace dictionary 
+In global scope i.e outside the function, locals and globals refer to same namespace dictionary. 
+
+Difference between globals and locals
+globals() return the reference to the global namespace whereas local() returns a 
+copy of the local namespace. 
+a = globals()
+x = 5
+print(a)
+Here a is a reference to global namespace. So, addition of x will also be reflected while printing a.
+
+def main():
+    a = locals()
+    x = 5
+    print(a)
+
+Here a is the actual copy of local namespace upto that point. So, further changes to local namespace wont be reflected while printing the value of a.
+
+
+global and non local keyword 
+A function cannot change the value of a globally defined variable. If the variable is imutable, you can only access the variable inside a function.
+If the variable is mutable, you can change the object's content however, you cannot totally reasign it.
+To perform operation on global variables, either mutable or immutable, we should define the variable as global inside the function.
+To perform operation on nearest enclosing scope, declare variable as nonlocal.
+
+However, its not consider a best practise. a function should generally not modify/interact with anything other than its own local namespace content i.e. should not cause any side effects. 
+
+
+Concluson:
+Virtually everything that a Python program uses or acts on is an object. Even a short program will create many different objects. In a more complex program, they’ll probably number in the thousands. Python has to keep track of all these objects and their names, and it does so with namespaces.
+
+
+
+An Overview for Python Modules and Packages
+
+Modular Programming:
+Modular Programming refers to breaking down a large programming task into more manageable substasks/modules. Individual modules can then be merged together to create a larger application.
+
+Advantages of Modular Programming
+
+1) Simplicity:
+Modular Programming breaks a task into smaller subtasks. So, instead of focusing on a big problem, we only focus on one single sub-problem at a time. This makes programming more enjoyable.
+2)Maintanable/Collaboration:
+If a task is broken down into smaller task, each task can be assigned to different developers. Each developer can work on a small subtask without worrying about the big task. A developer doesnot even need to know the knowledge of the application outside that module. 
+3) Reusability: If a task is created in such a way that minimizes dependency among other tasks, the task can also be used in multiple applications which enforces DRY principle.
+     
+
+Multiple developers can work to solve a big problem if the problem is broken down into smaller chunks 
+
+
+
+Modules:
+There are 3 ways of defining a module.
+1) A module can be written in Python itself.
+2) A module can be written in C and loaded dynamically at run-time(eg: regular expression)
+3) A module can be categorized as a builtin module if it is contained in the interpreter(eg: itertools)
+
+
+
+
+# What happens when we import a module interms of Searching
+import abc
+
+When the interpreter executes the above import statement, it searches for abc.py in a list of directories assembled from the following sources:
+
+1) The directory containing the module being run.
+2) list of directories containing in PYTHONPATH environment variable(if set).
+3) list of directories configured at the time of installing python. This is installation dependent.
+
+
+If python cannot find abc.py, do one of the following:
+1) keep abc.py in the same directory where running script is located. This directory is always in the list of directories where python looks.
+2) keep abc.py where it is but modify pythonpath environment variable to put the directory where abc.py is located. environment variables are added to the list of directories before executing any module.
+3) Put abc.py in installation dependent directories. You might not have write access to those drectories(depends on OS). 
+4) You can keep abc.py in any directory you want but modify the sys.path(where python looks for list of directories to check) at runtime. 
+
+Module's __file__ attribute will give the location where the module was found.
+import abc
+abc.__file__
+
+
+Each module has its own namespace. We can access any attribute present in the module's namespace by refering to that module.
+
+abc.py
+name = 'Sanjeev"
+
+
+xyz.py
+import abc
+x = abc.name
+
+
+Line 1 (import abc) in xyz.py adds a key "abc" to xyz's global namespace. The value is the module object itself. 
+In Line 2 x = abc.name, xyz module looks into its global namespace to find an attribute called abc. The value of that attribute is a module object. Now that module object looks in its global namespace to find an attribute called name.
+
+In python, even module is an object
+So, while importing a module with syntax "import abc", we add a key "abc" with its value being the "abc" module object in global namespace dictionary of the current(importing) module .
+So, no any variables defined in module "abc" is added to the global namespace. They are still present in "abc" modules global namespace dictionary.
+
+
+from <module> import <name>
+This syntax will place object/variable <name> defined in the imported module to curent module's global namespace dictionary.
+The module itself is not placed, only <name> is placed
+
+from <module> import *
+This syntax will place all the variables/objects defined in the imported module to curent module's global namespace dictionary.
+This syntax however won't include objects with name starting with "_"
+The module itself is not placed, only objects defined in the module are placed
+
+from <module_name> import <name> as <alt_name>
+This syntax places object <name> defined in the imported module to curent module's global namespace dictionary but the key will be <alt_name>. This can be used to avaoid conflicts in global namespace dictionary. 
+
+import <module_name> as <alt_name>
+This imports an entire module with an alternate name.
+
+
+You can import module within a function.
+func a():
+    from math import sum
+    sum()
+
+However, you cannot use importing all objects syntax
+func a():
+    from math import * //This is not allowed. This can be done only in module level.
+
+
+
+dir() function
+Everything is an object in python. This function returns the attributes that are part of the current object. 
+Example: 
+def f():
+    a = 7
+
+print(dir(f))
+A function is also a object. This returns list of attributes that can be used in the function object.
+
+if you pass a list object in dir() function, you will see a list of attributes which can be used in the list data structure.
+
+if you pass a module in dir() functiion, you will get list of attributes that can be used in that module object. Some attributes are created by interpreter. They will be present for each module. Python uses them internally. Other objects are user defined within that module. 
+
+if you donot pass anything in dir() function, you will get a list of keys from the namespace dictionary of current scope. 
+example:
+func A():
+    name = "Sanjeev"
+    print(dir())
+
+A()
+=> ["name"]
+
+locals() on the other hand will print the namespace dictionary itself.
+func A():
+    name = "Sanjeev"
+    print(locals())
+
+A()
+=> {"name":"Sanjeev"}
+
+
+A python module can be executed as a standalone script and also can be imported in any other module. It is crucial to distinguish when a module is being imported and when it is being run as a script.
+
+There is a special global vaiable called "__name__". Its value changes depending upon if we are running the module as a standalone script or we are importing the module.
+
+Whenever we run a module as a script, then the value of __name__ in the global namespace of that module is set to "__main__. 
+But, whenever a module is imported, the value of __name__ in the global namespace of imported module is set to it's own name.
+
+Modules are generally created as a standalone script when we need testing functionality.
+
+
+Module Loading
+A module is only loaded once per interpreter session. 
+
+Whenever a module is being imported, interpreter first checks if the module is present in memory. If yes, the module is served from memory.
+A module will be present in memory after first import to that module.
+ 
+If a module is being imported first time, interpreter executes everything inside the module. Every variable declared inside the module will be part of the module's global namespace. All the print statements are also executed. Then, interpreter will store the module object in memory.
+
+Now, whenever the module will be imported again in any file, interpreter will check to see if the module is present in the memory. If yes, instead of running through entire module again, it will simply load the module from meory. This time, interpreter will not execute even a single line of the module.
+
+If you imported a module, abc.py and changed its global namespace, this will be reflected in every other module which has imported abc.py as well.
+To revert the changes, you need to reload the module. Reloading a module will tell interpreter to execute the module again and create a new global namespace dictionary. 
+However, the memory address of the module won't change. 
+You can pass imported module object inside reload function from importlib to reload the module.
+
+
+
+Packages
+Pacakges are a way to organize all the modules and their namespaces. Packages also help to avoid name collision between two modules similar to how different modules help to avoid name collision between two same global variable.
+
+Just like importing a global variable from a module, a module can be imported from a package with the same syntax. The module is placed in the global namespace of the package.
+import package_name.module_name
+package_name.module_name.foo()
+from package_name.module_name import foo
+foo()
+from package_name.module_name import foo as bar
+bar()
+
+If you import a package, python interpreter won't put any modules inside that package object's global namespace. So, this syntax although valid, is of no use
+import package_name
+package_name.module_name //Attribute Error, attribute module doesnot exist.
+
+
+Package Initlaization
+Just like __int__ function gets run automatically when we instatntiate a class, __init__.py module gets executed, whenever we import a package or any modules of the package(if __init__.py file is present inside that package).
+
+Any variable inside the __init__.py file will be a part of package's global namespace. This file is executed again only on the first import. 
+  
+We can also access modules directly just by importing package.
+import package_name
+As ststed previously, this syntax is of no use as it doesnot place any modules in the global namespace dictionary of this package.
+But any variables defined in __init__.py file, will be part of the global namespace dictionary of this package.
+
+package/__init__.py
+name = "Sanjeev"
+from package import abc
+
+main.py
+import package
+package.name    =>Sanjeev
+package.abc     => <module abc> 
+
+
+In order to make a package, it was compulsory to include__init__.py file. Python would check this file to determine if something is a package. It could contain initialization code or be empty, but it was compulsory.
+But with Python 3.3, "Implicit Namespace Packages" were introduced which stated that __init__.py file is no longer needed for creation of a package. But it can be present if package initalization is needed.  
+
+The syntax from module import * imports all global variables of the imported module in the importing module. 
+But from package import * doesnot import all the modules from the package.
+
+When python encounters this syntax, python will look inside __init__.py file and import all variables defined in this file.
+This holds true unless __init__.py also contains a variable called __all__. __all__ is a list contaning "modules name of the current package" or/and "other variable defined in __init__.py file itself". 
+
+__all__ can be declared inside a module as well. This serves the same purpose as it does for the package when encountering syntax 
+from module import *
+
+In summary, __all__ is used by both packages and modules to control what is imported when import * is specified. But the default behavior differs:
+For a package, when __all__ is not defined, import * does not import anything.  
+For a module, when __all__ is not defined, import * imports everything (except—you guessed it—names starting with an underscore).
+
+
+Sub Package
+A package might contain additional subpackages which might contain their own subpackages and so on. Now, in order to import a module, the import statement will be like : from package.subpackage.subpakage.....module import name
+
+To import a module from a sibling subpackage, you can use either absolute import
+from parent_package.sub_package.module1 import func1 or relative import from ..subpackage.module1 import func1
+
+
+
+
+Abstract:
+
+Python's flexibility allows python to be used in multiple domains such as web development, making games. Because of this flexiblility, Python allows multiple packaging options. 
+A Developer should think about the end user and the environment in which the project will be run and decide the appropriate packaing option.
+
+
+
+
+
+
+
+
+
+
+Python Import System
+
+In python, module is just a single file. 
+
+1) When we import a module , the code inside the module is executed. Then a python object is created in the memory representing the module. In the current module's global namespace dictionary, a key value is created. key is the module name and value is the module's location in memory. Use globals() to check it.
+
+2) The type of the module is <class 'module'>. They are instance of ModuleType class defined in types module. 
+Example: isinstance(module1, types.ModuleType)
+
+3) Like any other object, we can get the memory address of module object using id function. We can also create a module by passing a module name and a string to ModuleType class.
+
+module1 = types.MduleType("mod1", "This is a test module') 
+
+4) We can also create an alias to a module.
+
+my_mod = module1. Both my_mod and module1 points to same object in memory.
+We can achieve this within import statement as well. (import module1 as my_mod) 
+
+5) passing module object to dir() function shows all the attributes of the module object.
+
+6) all those attributes are global variables in the imported module. so we can use them as global variables in the imported module.
+
+7) To get all attributes in module importing another module, use module.__dict__
+
+8) whenever we create a module, python adds some additional attributes like __file__ which represents the absolute path of the file in the computer, __name__ which represents the name of the file. 
+
+9) Not all python modules are written in python. Some are written in C, C++ for better performance. math module is  not a python file.
+
+10) Python exposes its import system through meta_path attribute of sys(system) module. meta_path is a list of object. To understand this objects in depth, we need to know anout finders and loaders(two import systems in Python).
+
+11)Finder's job is to locate the module and loaders job is to locate the module.
+
+12) A finder is a class that has an instance method find_spec. A loader is a class that has an instance menthod load_module.
+
+13) meta_path shows the list of finders and importers. So, all those objects have find_spec method.
+
+14) Some objet implement both finder and loader. Such object is called an importer.
+
+15)  BuiltinImporter is an importer for builtin modules. 
+
+16) builtin_modules_names attribute of the 'sys' module returns a tuple of all the builtin module's name. 
+
+Python standard library contains packages and modules that come with python directly i.e when you install python.
+There are 100s of modules containing 10's of thousands of code. All that data structures, classes defined in those modules will take a lot of memory. So, it doesnot make sense to implicilty load any module of standard library If user wants to have access to any functionality of a module in the standard library, user will have to explicitly tell python interpreter to load the module by using an import statement. Now, that entire module is a part of our program. 
+
+Python also has builtin functions, constants, types, exceptions etc. builtin variables are automatically loaded by python which means there is no need for you to import them. They will be a part of all your program. Data types such as set, list etc are builtin data types. Exceptions such as Assertion Error, Value Error are also builtin exceptions. Functions such as hasattr, setattr etc are also builtin functions.
+Builtins come with standard library. They are subset of standard library. 
+
+
+Every time we refer a variable in python, python looks in LEGB scope rule i.e.
+Local namesapce, Enclosing namespace, Global namesapce and Builtins namespace. 
+Every module has access to all the variables defined in builtins.
+Global Namespace dictionary contains a variable called __builtins__ which refer to the builtins module.
+
+
+Conclusion: There are 3 kinds of modules in Python.
+1) Standard Library Modules: Modules that come with python installation which are not needed to download seperately but we do need to import them in our program.
+2) Builtin Modules: Modules that come with python installation which are not needed to download seperately and we also donot need to import them in our program as they are automatically imported.
+3) Third Party Modules: Modules that we need to download and also install from third pary sites like Pypi.
+
+ 
+
+17) BuitinImporter module has a find_spec method as discussed above. We can pass 'math' in the method as 'math' is a builtin module.find_spec method returns a ModuleSpec object. This object has information on which loader to use to load the module. Since Builtlinimporter is also a loader, we get same object
+
+18) BuiltinImporter's find_spec method returns none if we pass a non builtin module name in it.
+
+19) Whenever you import any module in python, python first checks in global cache of already loaded modules. This cache is a dictionary with module name as key and module object as value. If python finds the module in the cache, the reference to the module is returned immediately. If not, python compiles and executes the module code and creates a module object and adds it to the cache. Finding and loading module is done by import protocol of python involving finders and loaders. 
+
+20) finder finds the appropriate loader to load a module. the loader then creates the module object in memory and the module is also added to the cache discussed above.
+
+21) sys.modules returns a dictionary that maps already loaded module's name module object in memory.
+
+22) When a module is imported, the module is added in the current modules namespace. We can get the namespace using globals()
+
+
+23) If a entry is present at sys.modules, no further check is done to verify if the entry is actually a module object.
+sys.modules["my_module"] = lambda : print("hello world")
+import my_module
+my_module()  => hello world. 
+
+
+24) You can delete any entry from sys.modules,
+del sys_modules["socket"].
+
+This removes the entry socket from sys.modules. Howver, the object is still in memory. Now, whenever the module will be be imported next time, python will recompile and reexecute the module and create a new module object.
+Then a new entry in created in sys.modules with module name as key and module object as value. 
+
+So, technically we have 2 objects in memory for the same module. If the module which was removed from sys.modules was imported by any other module prior to the deletion, the referencing module will still have reference to the removed  module.
+
+So, in our project, we have different objects of the same module and different modules are referencing to different objects. This might introduce some bugs as any changes created to a module won't be reflected in another.
+
+To prevent this, we can use importlib.reload(module). reload method mutates the module in place. So, new object is not created but existing object is mutated with the values obtained after recomiling the module. So, all prior modules which have reference to this module will be able to see changes
+
+importlib module contains a function called import_module which is used to import a module without import statement.
+importlib.util.find_spec("module_name") will return the spec object for a module similar to a finder.  
+
+
+
+Module vs Pacakages
+Packages are modules in a directory.
+Whenever you import a module or package, you get a module object. The only difference is that package will have a attribute __path__ set to the directory where its code resides. module donot have __path__.  
+
+Python defines 2 types of package.
+1) Traditional/Regular Package (directory with __init__.py file)
+2) Namespace Package (directory without __init__.py file)
+
+When you import a package, python will compile the code inside __init__.py and execute it. The global namespace of __init__.py will now be the global namespace of the package.
+In order words package name will point to a object created by compiling __init__.py file.
+
+__file__ attribute of a package will be __init__ file.
+__package__ and __name__ attribute will have the package name.
+Just like a module, package will also have __spec__ attribute with a ModuleSpec object showing which loader should be used to load the package. 
+Just like amodule, an entry is also added to sys.modules cache whenever a package is imported.
+
+import package.module
+This syntax can only be used to import a module inside the package. To import any other variable from the __init__.py, use from package import variable.
+import package.module, first executes the __init__.py module. Then in the sys.modules dictionary, a reference to that module object is created with the package name. Now python looks for the module. If module is not found, an import error is raised. If module is found, the module is executed and a module object is created. A new entry will be added in sys.modules with package_name.module_name as key and module object as value.
+The reference to module object is not added to the importing module's global namespace. However, reference to the package object is added.So the imported module can be referenced from the package object namespace dictionary. So, to access the module, we first have to access the package object and then the module.
+
+Relative Imports
+Relative Imports can only be used inside packages.
+
+
+Namespace Package
+When printed a Namespace package will show that it is a namespace package.This package has all attributes and behaviour of regular package except few behaviours. 
+__file__ attribute of a namespace package will be empty but regular package will be path to __init__.py file. This kind of packages use a special loader.We can view it using __spec__ attribute
+You can have regular packages inside a namespace package.
+
+Python supports impoting a package from zip file. We have to add a absolute path to the zip file in sys.path.
+
+PYTHONPATH environment variable can be used to set entries in sys.path. If you run python after setting this variable, the value will be added in sys.path
+
+
+-m flag
+While executing any module program from command line, we can specify -m flag. This tells interpreter to search for the module in sys.path and execute it. 
+You can make a package executable by specifying a __main__.py file inside the directory.Then you can use python -m <package_name> to execute the package. You can also have a __init__ file. This will allow you to import the package as a regular package and also allow make it a CLI application. 
+Examples: python -m pip install requests, python -m venv venv
+
+
+
+Source Distributions
+
+A Source Distribution is a directory containing source code of a package with a specific release version associated with it. Source Distributions are also known as sdists.
+Example: abc.1.2.2.tar.gz
+
+Here, abc is the package name and 1.2.2 is the release version of the package.
+
+Source Version can serve as a documentation specifying about many version that has been released for a specific package.
+
+Packaging tools like pip use Source Distributions to install a package and also install other dependent packages.
+
+pip install foo locates the Source Distribution for foo and downloads it. If foo dependens on bar then pip also locates the Source DIstribution for bar and install it. 
+
+
+Build Frontend:
+
+A build Frontend is a tool that takes sdists and build wheels from them. The actual building is done by sdists build backend. In a Command such as pip wheel some-directory, pip is a build frontend.
+
+Integration Frontend:
+
+An integration frontend is a tool that takes a package, multiple package or even set of packages(requirements.txt file) and tries to update the working environment by installing those packages. This step may require locating and installing a combination of wheels and sdists. In a command such as pip install flask==2.4.0, pip is a integration frontend. 
+
+
+
+Source Tree:
+
+To distribute a package, there is a certain format to be folowed. This involves creating a file called setup.py. It's specification is encoded in source code and documentation of disutils, setuptools and pip.
+
+PEP 518 
+
+PEP 518 specifies how Python software packages should specify what build dependencies they have in order to execute their chosen build system. As part of this specification, a new configuration file is introduced for software packages to use to specify their build dependencies.
+
+The first tool developed by Python for building distributiions of packages was disutils. Later on, setuptools gained popularity as it added some features on top of disutils. Both tools used the concept of a setup.py file. The file was executed by project maintainer to build the distributions and users to install the distributions.
+
+Disutils was part of python stabdard library wheras setuptools wasn't. This meant that disutils had no other dependencies except Python itself. So, there was no need to specify any dependency information.   
+
+Build Backend:
+Every python package must provide a pyproject.toml file and specify the backend (build system) it wants to use. Then the distribution can be generated with a tool that provides functionality to generate a Souce Distribution(sdist).
+
+Setuptools is one of the build Backend.
+
+pyproject.toml file contents:
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+In addition to build system, you also have to provide some package information such as metadata, contents, dependencies etc. This can be done either in the same file or setup.cfg or setup.py   
+
+
+
+
+Build
+
+build is a build frontend.
+Running Command python -m build
+This command creates a build folder called dist. Inside build folder, there will be two files. A source Distribution (sdist)(tar.gz file) file which is built from the source directory and a binary distibution(wheel) (.whl file) which is built from sdist. This dist folder is ready to be uploaded to PyPi.
+
+IF there are multiple top level packages then, setuptools will not proceed with the build. If you are creating a distribution with multiple packages, you have to explicitly mention the information.
+
+To do so, add a key value pair to setup.py file.
+
+py_modules = ["module1", "module2"]
+
+Uses should never run setup.py as a Script. It is strongly discouraged. Commands like python setup.py install, are/will be deprecated. It is a good practise to expose as much as possible configuration in pyproject.toml/setup.cfg file and keep setup.py file as minimal as possible. 
+
+
+For projects following simple, file structure, setuptools automatically detects all packages and namespaces. However, complex projects might include files that might not be necessary to be distributed. To solve this problem, setuptools provide a way to customize  packages that should be distributed and where they should be found.
+
+find_packages(where=".", include=['*'], exclude=[]).
+
+
+
+Automatic creation of scripts. 
+
+Setuptools supports creating scripts automatically upon installation. Those scripts run code within your package. To specify scripts, you have to specify "entry points"
+
+entry_points = {
+'console_scripts: [
+        'cli-name' = mypkg:mymodule:some_func',
+        ]
+}
+
+When the project is installed, a cli-name will be created. Upon running the script, it will invoke the function some_func in mypkg/mymodule.py file.
+
+A package might have dependencies on other packages. Setup tools provide a way for user to specify the dependencies which will be iinstalled when installing the package. 
+
+Each dependency is represented with string and can optionally contain version requirements.When your project is installed, all of the dependencies not already installed will be located (via PyPI), downloaded, built (if necessary), and installed.
+
+
+
+Development Mode
+
+Setup tools allow you to install a package without copying any files to your interpreter directory(site-packages directory). This allows you tot modify ypour source code and have changes take effect without you having to rebuild and reinstall.
+
+Uploading to PyPi
+
+In order to upload a package to Pypi, twine is needed.
+
+
+
+
+
+1) The first step towards sharing a Python library or program is to build a  distribution/package that can be distributed as a library.
+
+2)To instruct setuptools on how the distribution should be built, additional files containing metadata and configuration info should be added. These extra files also helps pip during the installation process.
+
+3)

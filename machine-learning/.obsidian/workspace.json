@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "0415438f38e540ed",
+    "type": "split",
+    "children": [
+      {
+        "id": "44fa428874dfbadd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "013db221ad93e91d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Topic-4 (linear-regression)/Note-1 (Introduction to Liner Regression).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a2e51df7189bece5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Topic-4 (linear-regression)/Note -2 (Cost function).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "94ba705b66ff4f00",
+    "type": "split",
+    "children": [
+      {
+        "id": "862b7029e3467ef5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "371c0af2ba6c2c29",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bba5f1754581c675",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "36a1cc2110741c3e",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 303.5
+  },
+  "right": {
+    "id": "88a1ef990c4371dc",
+    "type": "split",
+    "children": [
+      {
+        "id": "32d4e7ef0c795efc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fddf59a21d4ce9be",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Topic-4 (linear-regression)/Note -2 (Cost function).md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "41c53e8d7d5abee8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Topic-4 (linear-regression)/Note -2 (Cost function).md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7b4b06bdd9a49d0c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0b5e9346fdaadeb3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Topic-4 (linear-regression)/Note -2 (Cost function).md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "a2e51df7189bece5",
+  "lastOpenFiles": [
+    "Pasted image 20230317200707.png",
+    "Topic-4 (linear-regression)/Note-1 (Introduction to Liner Regression).md",
+    "Topic-4 (linear-regression)/Note -2 (Cost function).md",
+    "Topic-5 (gradient descent).md",
+    "Pasted image 20230312170829.png",
+    "Pasted image 20230312133058.png",
+    "Pasted image 20230312132925.png",
+    "Pasted image 20230312132240.png",
+    "Pasted image 20230312132050.png",
+    "Pasted image 20230312131621.png",
+    "Pasted image 20230312131324.png",
+    "Pasted image 20230312124921.png",
+    "Pasted image 20230312124731.png",
+    "Pasted image 20230312123915.png",
+    "Topic-4 (linear-regression)/notebooks/linear_regression_algorithm.ipynb",
+    "Topic-4 (linear-regression)/notebooks/linear_regression_algorith.ipynb",
+    "Topic-4 (linear-regression)/notebooks",
+    "Topic-4 (linear-regression)",
+    "Topic-1 (introduction-to-machine-learning)/Note-2 (types of machine learning).md",
+    "Topic-2 (machine-learning-workflow)/Note-1.md",
+    "Topic-3 (data-quality)/Note-2 (data cleaning).md",
+    "assets/extra notes/notebooks/Read_Data_Quality_Inspection_and_Data_Cleaning.ipynb",
+    "assets/extra notes/notebooks/Read_Data_Quality_Inspection_and_Data_Cleaning.pdf",
+    "assets/extra notes/2.Data Quality Inspection.pdf",
+    "assets/extra notes/notebooks",
+    "assets/extra notes/Read_Data_Quality_Inspection_and_Data_Cleaning.ipynb",
+    "Topic-3 (data-quality)/Note-1 (data quality inspection).md",
+    "Topic-3 (data-quality)/Note-3 (data-versioning).md",
+    "Topic-3 (data-quality)",
+    "Topic-2 (machine-learning-workflow)/Data Encoding.md",
+    "Topic-1 (introduction-to-machine-learning)/Note-7 (Choosing the right model).md",
+    "Topic-1 (introduction-to-machine-learning)/Note-6 (Breaking model training data).md",
+    "Topic-1 (introduction-to-machine-learning)/Note-3 (Types of Data available for training).md",
+    "Topic-1 (introduction-to-machine-learning)/Note-8 (Model Generalization, Overfitting, Underfitting).md",
+    "Topic-2 (machine-learning-workflow)/Data Quality Verification.md",
+    "Topic-2 (machine-learning-workflow)/histogram, bar graph.md",
+    "Topic-2 (machine-learning-workflow)/skeweness.md",
+    "Topic-2 (machine-learning-workflow)/Correlation, Correlation Matrix, HeatMap.md",
+    "Topic-2 (machine-learning-workflow)/Descriptive Statistics of data.md",
+    "ReadMe.md",
+    "().md",
+    "Topic-1 (introduction-to-machine-learning)/Note-1 (introduction).md",
+    "maths-for-machine-learning/maths-for-machine-learning.md",
+    "Topic-1 (introduction-to-machine-learning)/Note-9 (Setting the environment).md",
+    "Topic-1 (introduction-to-machine-learning)/Note-5 (features).md",
+    "Topic-1 (introduction-to-machine-learning)/Note-4 (evaluation metrics).md"
+  ]
+}

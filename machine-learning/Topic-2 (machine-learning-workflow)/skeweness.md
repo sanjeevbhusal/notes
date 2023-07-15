@@ -1,0 +1,5 @@
+In statistics, "skewness" refers to the degree to which a distribution is asymmetrical. If a distribution is perfectly symmetrical, it is said to have zero skewness. However, if the distribution is not symmetrical, it is said to be skewed.
+
+When someone says "the distribution is skewed for 'failures' ", it means that the distribution of the data for the "failures" category is not symmetrical. Specifically, it means that the data for "failures" is either more spread out on one side of the distribution than the other, or that it has a longer tail on one side than the other.
+
+Skewness is important to consider when analyzing data because it can affect the mean and median values. If a distribution is skewed, the mean and median values may not be the same, and this can affect how the data is interpreted or modeled. In general, skewed data may require more advanced statistical techniques to analyze and model effectively.

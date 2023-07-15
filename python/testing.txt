@@ -1,0 +1,119 @@
+Exploratory-Testing 
+
+This is a manual form of testing done with out any plans. In exploratory testing, you are just exploring different features of your application.
+
+
+Manual Testing
+
+To do a complete manual testing, You can make a list of features your application has and identify parts of your application which requires different types of input and their expected output. Now, everytime you make change to your code, you have to go through all items in your list and test them. 
+
+
+Automated Testing
+
+This test is done programmatically. First, you create the list of features you want to test. After that you write tests(program) for all those features with input data (if required) and expected output. You can also decide in which order you want to test i.e which feature to test first and so on. Here, testing is done by a script instead by human. 
+
+
+
+Integration Testing
+
+Testing multiple components is known as integration testing.
+You might have a button which make some changes to the database.
+In order for this functionality to work, both components (button and database)
+should work properly. 
+Testing of multiple components is known as Integration testing.  A component might be any part of your application. Example: Function, Classes, modules etc.
+
+There is an issue with Integration testing. If the above test fails, its hard to diagose if the problem lies in the button component or database component. There is a chance that button has send a wrong SQL query to database. There is also a chance that databse has some problem and is not able to interpret the SQL query. 
+What if there was some connection problem between button's logic and database?
+
+
+To solve this problem, there is another kind of test called Unit Test
+
+Unit Test
+
+A unit test is a smaller kind of test than Integration test. This test only operates on a singe component and checks if the component is working in a right way. It helps to pinpoint the error.
+
+In above example, we can multiple unit test.
+One unit test might check if the connection between program and database is 
+up-and-running or not.
+One unit test might check if database is able to interpret SQL query or not.
+
+
+
+Conclusion:
+1) There will be more unit tests than Integartion tests.
+2) Unit test check if a component is working properly.
+3) Integration test checks if two components are able to work/operate with each other properly.
+4) Unit tests are done first followed by Integration test.
+
+
+# Test Runner
+
+If we have 5 tests and if the second one fails and produces an error,
+the code will not move forward. bUt we would like to test al 5 tests and also view which test passed, which failed, what was the output of the test and other information. Doing all this by yourself is possible, but there are already few libraries who do this. These libraries thatexecutes your test code, checks for assertions and give you results are called test runner.
+
+Python has a buitin test runner called unitest. Third party test runners include nose and pytest.
+
+
+Unittest
+
+1) One of the requirement of unitest is to put all your tests in classes as methods.
+2) Unitest lirary has bunch of special assertion methods inside Unittest.TestCase class. So, instead of using builtin assert statement, we have to those assertion methods. 
+
+
+Side Effects
+Whenever you are executing a piece of code, the code will interact/alter with other components of the environment such as reading/modifying an attribute of a class, writing/reading a file in the filesystem, reading/altering a value on a database etc. These are known as side effects.
+
+
+If the unit of code you want to test has a lot of side effects i.e ut does too many things, you should probably break your code into multiple components. Then you can write unit tests for all individual components. (Remember, unit test should only check a single unit/functionality)  
+
+
+
+Command Line Entry Point
+
+To run unit test in unitest library, we wrote,
+if __name__ == "__main__:
+unittest.main()
+
+This is a command line entry point. Meaning if we execute this script from command line (python test.py), the first entry point of this script will be unittest.main(). First, it discovers all the classes in the file which inherit from unittest.TestCase class and executes the testrunner.
+
+With out Command Line Entry Point
+
+To run the same testfile without command line entry point, run command,
+python -m unittest <filename>
+
+This command runs testrunner on this file.
+
+Instead of explicitly mentioning the filename, you can run command ,
+python -m unittest discover.
+This discovers and runs all the files with name, test*.py in the current directory. 
+If you have test files inside a directory, run command,
+python -m unittest discover -s <directory_name>.
+
+
+
+
+Advanced Testing
+Its not always possible to create a static input for your test. In case of dynamic input(eg: an instance of a class), you need fixture.
+
+# Fixture
+The data that you create as an input for a test is called fixture. User's shoud create fixture and reuse them in multiple tests. Example: A databse object could be a fixture.
+
+Instead of just creating new methods for input changes, same test method can be reused. This is called parameterization. 
+
+
+Isolating Test Behaviors
+Because of side effects caused by tests, same test could give different output each time the test is run or a test can impact the state of the appplication and cause another test to fail.
+
+For such piece of application we should use Integration testing instead of unit testing but all the components that form the Integration testing should be unit tested as well.
+
+
+Integration testing behaves like an end use of the applicaton. It might call an HTTP REST API, fetch/alter state of the databse, interact with filesystem etc. 
+
+Every test must follow the Input, Execute and Asset pattern.the only diiference between unit tests and integration tests are that integration testing are checking more components at once and therefore will have more side effects than a unit test. Also an integration test requires more fixtures like a database, configuration file etc.
+
+You can create a folder called fixtures and store the test data in a JSON format inside a fixture file.Then inside the setup method, you can load the data from the fixture file
+ 
+If your test depends upon data from a remote API, you won't be able to run tests if the API is offline or there is some connectivity issue. In such cases, you might want to store the data in a fixture file available locally.
+
+requests library has a complimentry package called responses to achieve it. 
+

@@ -1,0 +1,27 @@
+What is N-Grams?
+N-Grams are continous squence of words/symbols in a document. They are used while dealing with text  in Natural Language Processing(NLP).
+
+n in n-grams is a positive integer. Depending upon the value of n, n-grams are  classified into multiple types. 
+
+n   Term
+1   Unigram
+2   Bigram  
+3   Trigram
+4   n-gram
+
+Different types of n-grams are suitable for different types of applications.
+You should try different n-grams on your application to find out which one works the best for your text analysis. 
+
+Example: In case of filtering spam, trigrams and 4 grams works the best
+
+simple text like "My name is Sanjeev" can be represented in n-grams like this:
+
+Type-of-n-gram                                      Generated-n-grams
+Unigram(Continous sequence taking 1 word at a time)   ["My", "name", "is", "Sanjeev"]
+Bigram(Continous ssequence taking 2 word at a time)  ["My name", "name is", "is Sanjeev"]
+Trigram(Continous sequence taking 3 word at a time)  ["My name is", "name is Sanjeev"] 
+
+N-grams are also defined as neighbouring sequence of items of a document. Item just means words, letters, symbols.
+
+
+ 
