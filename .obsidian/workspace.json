@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "0d0e1acbb77dd998",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "react-query/Note on React Query.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "react/Why you shouldn't use local storage for storing user session.md",
+                "file": "react-query/Note on React Query.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "react/Why you shouldn't use local storage for storing user session.md",
+                "file": "react-query/Note on React Query.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "react/Why you shouldn't use local storage for storing user session.md"
+                "file": "react-query/Note on React Query.md"
               }
             }
           }
@@ -146,10 +159,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "553f4a7d99aa29ef",
+  "active": "0d0e1acbb77dd998",
   "lastOpenFiles": [
-    "react/Research about Indexed DB.md",
     "react/Why you shouldn't use local storage for storing user session.md",
+    "react-query/Note on React Query.md",
+    "react-query",
+    "react/Research about Indexed DB.md",
     "devops/docker/ReadMe.md",
     "devops/devops-overview/ReadMe.md",
     "react",
