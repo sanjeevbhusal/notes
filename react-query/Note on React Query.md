@@ -33,4 +33,6 @@ Query function is the actual function that has the logic of making a api call. I
 
 useQuery hook returns a object that contains the actual api response, state of the request, error, a way to refetch the data again etc.
 
-If you have a dependency 
+If you make a api call twice for the same url,  react query will not send the second call and will instead pick the value from the output of first call. This is called caching.
+
+Example: If you let user pick between loading profile of 5 users (user1,...user5), you have to do a minimum of 5 api calls to load data for all 5 users. If the user loads data for user1, user2 and again user1, only 2 api calls will be dispatched.  React query will remember that it has already fetched the information of user1 before. Hence, in the third request, it will just pick the value from cache. 
