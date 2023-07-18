@@ -32,3 +32,5 @@ Example: Lets say one of the component takes a username as a prop and makes a ap
 Query function is the actual function that has the logic of making a api call. In almost all cases, you will define the function elsewhere and only pass the reference of it. The function should return a promise.
 
 useQuery hook returns a object that contains the actual api response, state of the request, error, a way to refetch the data again etc.
+
+If you have a dependency 
