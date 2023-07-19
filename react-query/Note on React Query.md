@@ -36,3 +36,11 @@ useQuery hook returns a object that contains the actual api response, state of t
 If you make a api call twice for the same url,  react query will not send the second call and will instead pick the value from the output of first call. This is called caching.
 
 Example: If you let user pick between loading profile of 5 users (user1,...user5), you have to do a minimum of 5 api calls to load data for all 5 users. If the user loads data for user1, user2 and again user1, only 2 api calls will be dispatched.  React query will remember that it has already fetched the information of user1 before. Hence, in the third request, it will just pick the value from cache. 
+
+If your query depends upon some kind of variable to exist, you will need to disable the query until the variable exist. You can do so in react query. 
+
+To know the status of your request (success, error, idle) etc, you can use the properties on the object returned by react query. 
+
+If your query is currently disabled, then object.isLoading property will be true. this is because the data has not been returned from the query. useQuery hook doesnot consider that the request itself has not dispatched. isLoading property will be true even if the request has not been dispatched yet. 
+
+To solve this problem, react query has a property called fetchStatus. The possible values can be fetching, idle and paused. If the request has been dispatched but the data has not yet returned, fetchStatus will be fething. If the request has completed or is currently disabled then the status will be idle. If the request couldnot complete due to network error, then the fetchStatus will be paused.
