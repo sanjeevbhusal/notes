@@ -77,4 +77,8 @@ The second one is when the query key changes.
 
 The third one is when user refocuses on the browser window. If a user has been inactive for some time and then refocuses on the browser window, react query will refetch all stale queries. This is enabled by default for all queries but can be disabled individually with refetchOnWindowFocus.
 
-The fourth one is network re-connection. If the network is re-connected, react query refetches all the stale queries. All the queries that have been dispatched but were not succesfull due to the network error will have a status of 
+The fourth one is network re-connection. If the network is re-connected, react query refetches all the stale queries. All the queries that have been dispatched but were not succesfull due to the network error will have a status of paused. When network re-connects, such queries are dispatched again and their state changes to fetching. This is enabled on default. 
+
+The fifth one is a time we can set to refetch a individual query. React query will refetch the query for each interval of time regardless if the query is stale or fresh.  
+
+You can also manually tell react query to refetch a query. This is useful for programmatic logic.
