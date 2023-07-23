@@ -44,3 +44,14 @@ To know the status of your request (success, error, idle) etc, you can use the p
 If your query is currently disabled, then object.isLoading property will be true. this is because the data has not been returned from the query. useQuery hook doesnot consider that the request itself has not dispatched. isLoading property will be true even if the request has not been dispatched yet. 
 
 To solve this problem, react query has a property called fetchStatus. The possible values can be fetching, idle and paused. If the request has been dispatched but the data has not yet returned, fetchStatus will be fething. If the request has completed or is currently disabled then the status will be idle. If the request could not complete due to network error, then the fetchStatus will be paused. 
+
+When react query is requesting data for the first time, the query goes into loading state. When react query refetches the data, it doesnot go into loading state. This is because the data is already present to the client and react query is re-feeching to make sure the updated data comes to the client. In such cases, the state of the query goes into fetching state. To summarize, everytime react query fetches the data (including first time), the state of the query goes into fetching. For the first time, the state also goes into loading state since there is no data available in the cache.
+
+
+### How does react query know to refetch a certain query?
+
+React query also maintains a additional state for the query, fresh or stale. When the data is fetched, it is stored in the cache. This data can either be marked as fresh or stale. When a data is marked as fresh, this means that this data is not going to change in the server soon. If it is marked as stale, this means the data changes very frequently in the server. By default, every query is marked as stale. You can know if a query is stale or not by a boolean flag isStale on the query.  
+
+When every component using a query with a certain key unmounts, the query will be marked as inactive. The data is not removed from the cache just in case it might be requested in the future. React query will remove the data from the cache if the query isn't used for a while.
+
+Before a query switches from active to inactive, it might switch several times between "stale and fresh " and "idle or fetching" . This happens because react query might trigger a re-fetch of the query to get the fresh data from the server. As discussed above, react query only refetches the query if it is marked as stale. This means the data will be switched from fresh to stale several times. 
