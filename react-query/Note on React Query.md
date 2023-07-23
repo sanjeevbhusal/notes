@@ -63,3 +63,18 @@ This happens because react query might trigger a re-fetch of the query to get th
 #### Why does the state switch between idle and fetching several times?
 
 This happens because react query might trigger a re-fetch of the query to get the fresh data from the server. While re-fetching the data, the query is marked as fetching and when it completes, it is marked as idle.
+
+
+You can mark a query's lifespan via a property called staleTime. If this property is not set or is set to 0, the query is immediately marked as stale. But if this is marked as 5 seconds, then the query is marked as fresh for 5 seconds and then marked as stale. When this query is marked as stale, it is eligible for re fetching.You can also mark the staleTime to infinity. This means the query will be only be fetched once for the entire application lifecycle. 
+
+Please note that the queries aren't refetched yet. They are just eligible. This is because every query is marked as stale by default. Hence, it would create a infinite re-fetching.
+
+#### What causes react query to refetch queries marked as stale.?
+
+There are 5 specific triggers which tell react query to refetch a query.  The first one is when the component first mounts. If the component unmounts and mounts again, react query will refetch the query. But the data property of the query will not be undefined. It will be the stale data in the cache. This is done so that the UI will be able to render some data instead of rendering a loading screen. When refetching completes, the new data will replace the existing data in the cache..
+
+The second one is when the query key changes. 
+
+The third one is when user refocuses on the browser window. If a user has been inactive for some time and then refocuses on the browser window, react query will refetch all stale queries. This is enabled by default for all queries but can be disabled individually with refetchOnWindowFocus.
+
+The fourth one is network re-connection. If the network is re-connected, react query refetches all the stale queries. All the queries that have been dispatched but were not succesfull due to the network error will have a status of 
