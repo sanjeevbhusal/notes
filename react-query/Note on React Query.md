@@ -54,4 +54,12 @@ React query also maintains a additional state for the query, fresh or stale. Whe
 
 When every component using a query with a certain key unmounts, the query will be marked as inactive. The data is not removed from the cache just in case it might be requested in the future. React query will remove the data from the cache if the query isn't used for a while.
 
-Before a query switches from active to inactive, it might switch several times between "stale and fresh " and "idle or fetching" . This happens because react query might trigger a re-fetch of the query to get the fresh data from the server. As discussed above, react query only refetches the query if it is marked as stale. This means the data will be switched from fresh to stale several times. 
+Before a query switches from active to inactive, it might switch several times between "stale and fresh " and "idle or fetching" . 
+
+#### Why does the state switch between stale and fresh several times?
+
+This happens because react query might trigger a re-fetch of the query to get the fresh data from the server. As discussed above, react query only re-fetches the query if it is marked as stale. Hence, there might be multiple switches between fresh and stale. 
+
+#### Why does the state switch between idle and fetching several times?
+
+This happens because react query might trigger a re-fetch of the query to get the fresh data from the server. While re-fetching the data, the query is marked as fetching and when it completes, it is marked as idle.
