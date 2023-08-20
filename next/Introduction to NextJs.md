@@ -80,3 +80,11 @@ By default, every component in nextjs will rendered as Static Generation i.e, it
 
 
 
+### Incremental Static Generation Options
+
+You can either cache the entire page for some time or just the results of a api call. If you cache the entire page, nextjs will re-render the page once the timer is over. If you cache the network api call, nextjs will re-run the component for every request but will not dispatch the network request inside the component. Instead, it will use the cached value for that api call.
+
+If your component uses multiple api calls, you can configure which api call should be cached and which should run at each component render.
+
+
+
