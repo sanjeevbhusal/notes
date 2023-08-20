@@ -19,3 +19,7 @@ All the limitations of react above are solved by Nextjs.
 
 When you create a next project via (create-next-app), you get to decide if you want to use tailwind, typescript etc. Depending upon the choice, you will endup with different config files. Apart from config files, there are 2 directories, public and src.The main codebase will be under the src directory. Anything that is present in public will be accessible directly as a static file. 
 
+Nextjs uses Webpack as the module bundler. It will bundle everything inside the src directory in the single Javascript file.  Nextjs uses file based routing. This means, we donot have to use any routing library inside Nextjs. 
+
+The /src directory should compulsorily have app directory. /src/app directory will serve as the routing point for any kind of routes in the application. If you want to render some component at /about, then you should create a about directory inside app directory. Next will map the directory structure with the routes in the url.
+
