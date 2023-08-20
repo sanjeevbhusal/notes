@@ -35,10 +35,8 @@ This is where layout.tsx comes in. Next will pass the component from page.tsx as
 
 Generally, Layout.tsx will not contain metadata about the page itself. Metadata of the page is present in the head tag of the html document. Next will automatically generate the contents in the head tag.  We can also override this behavior.
 
-Both page.tsx and layout.tsx can have multiple components inside it. The component that
+Both page.tsx and layout.tsx can have multiple components inside it. The component that should be served as the layout and page should be exported as default from the files. 
 
+If you want to render a page in /about url, then you should create a about directory inside app directory. This folder should also have a file called page.tsx. When you visit /about, next will take the default exported component inside /app/about/page.tsx and pass it as a prop to default exported component in /app/layout.tsx. There might be cases where you might have nested routes inside /about routes such as /about/company, /about/careers etc. In such scenarios, you have to create nested folders such as /app/about/company, /app/about/careers and have a page.tsx file in both the folders. If both page.tsx needs to share some code, you can create a layout.tsx in /app/about directory.  This way, to render the contents for a single url, single/multiple layout components and a single page component is needed.
 
-root url, you will 
-
-If you want to render some component at /about, then you should create a about directory inside app directory. Next will map the directory structure with the routes in the url.
 
