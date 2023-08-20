@@ -48,8 +48,8 @@ In Client side rendering, the next server, will send javascript(react+next) to t
 
 ### Data Fetching in Client Side / Server Side
 
-You can mark a component as being async if it is to rendered in the server. In React, you cannot mark a react component as async. This is because react needs the return value of the component to render to DOM as soon as possible. So, if you need to do any kind of data fetching, you usually do it in useEffect in the component.
+You can mark a component as being async if it is to rendered in the server. If the component is rendered client side, it cannot be marked as client. This is because react needs the return value of the component to render to DOM as soon as possible. 
 
-With nextjs, you can directly mark the component as async and perform await operations for data fetching before returning the html result. This is possible since it is happening in the server and not client. 
+If you need to do any kind of data fetching in client side component, you usually do it in useEffect. For data fetching in server side component, you can mark the component as async and make a api call directly in the component and await it. Once the await is over, you can take the data and return html.
 
 This also has some of the downsides if you donot use it properly. Hence, It is important to know where do you want the data to be fetched, client side or server side. This will decide if the data fetched will be dynamic or static. 
