@@ -58,11 +58,13 @@ This also has some of the downsides if you donot use it properly. Hence, It is i
 
 There are 3 different rendering methods in Nextjs, Static Generation, Incremental Static Generation and Dynamic Rendering.
 
-Static Generation means  running the component once, creating the final html document and then storing it in the cache for every subsequent request. This means the server will only run the component once and reuse the generated html for every request. This means if the component does some kind of api call, the api call will only be done once when the component is first rendered. This is only suitable for pages that have static content and will never change dynamically(Eg: About page of the company).
+Static Generation means running the component once, creating the final html document and then storing it in the cache for every subsequent request. This means the server will only run the component once and reuse the generated html for every request. This means if the component does some kind of api call, the api call will only be done once when the component is first rendered. This is only suitable for pages that have static content and will never change dynamically(Eg: About page of the company).
 
-Incremental Static Generation is used when you the component needs dynamic data but the data doesnot change frequently. You can tell nextjs to re 
+Incremental Static Generation is used when you the component needs dynamic data but the data doesnot change frequently. Just like Static Generation, you will run you component once, generate html and serve it in every request. But as your component relies on dynamic data, you might have to refetch the data and re-generate html document once the data is changed. So, you tell nextjs to regenerate the html document after certain intervals of time such as 5 seconds, 1 hour etc. This technique is useful only if you know you donot need to make a api call to get latest data on every network request because your data doesnot change much. If the data changes very frequently, then it is just better to do a dynamic rendering.
+
+Dynamic Rendering means running the entire component again for each request. 
 
 Incremental Static Generation is used when you have pages which have combination of both static and dynamic data. Since, the component uses dynamic data, you cannot perform Static Generation. It also doesnot mean, you need to always run the component for every request. In a component, you can extract all the static content and create a html document out of it. Then, for the dynamic part, you can ship the javascript with that html document itself. This way, when the client gets the html, it shows the static content first, then executes the javascript which renders dynamic content. This process is also called hydration.  
 
-Dynamic Rendering means running the entire component again for each request. 
+
 
