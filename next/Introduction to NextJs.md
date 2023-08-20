@@ -40,3 +40,16 @@ Both page.tsx and layout.tsx can have multiple components inside it. The compone
 If you want to render a page in /about url, then you should create a about directory inside app directory. This folder should also have a file called page.tsx. When you visit /about, next will take the default exported component inside /app/about/page.tsx and pass it as a prop to default exported component in /app/layout.tsx. There might be cases where you might have nested routes inside /about routes such as /about/company, /about/careers etc. In such scenarios, you have to create nested folders such as /app/about/company, /app/about/careers and have a page.tsx file in both the folders. If both page.tsx needs to share some code, you can create a layout.tsx in /app/about directory.  This way, to render the contents for a single url, single/multiple layout components and a single page component is needed.
 
 
+### Server side vs Client side Rendering
+
+In Server side rendering, the next server will generate html in the server and send it to the browser. User makes a request to a endpoint, nextjs server will map the url with the page and layouts, execute the component, generate html and send it to the browser.
+
+In Client side rendering, the next server, will send javascript(react+next) to the browser, browser executes the javascript, nextjs server will map the url with the page and layouts, execute the component, generate html and render it to DOM. 
+
+### Data Fetching in Client Side / Server Side
+
+You can mark a component as being async if it is to rendered in the server. In React, you cannot mark a react component as async. This is because react needs the return value of the component to render to DOM as soon as possible. So, if you need to do any kind of data fetching, you usually do it in useEffect in the component.
+
+With nextjs, you can directly mark the component as async and perform await operations for data fetching before returning the html result. This is possible since it is happening in the server and not client. 
+
+This also has some of the downsides if you donot use it properly. Hence, It is important to know where do you want the data to be fetched, client side or server side. This will decide if the data fetched will be dynamic or static. 
