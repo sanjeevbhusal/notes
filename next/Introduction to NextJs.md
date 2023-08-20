@@ -62,9 +62,21 @@ Static Generation means running the component once, creating the final html docu
 
 Incremental Static Generation is used when you the component needs dynamic data but the data doesnot change frequently. Just like Static Generation, you will run you component once, generate html and serve it in every request. But as your component relies on dynamic data, you might have to refetch the data and re-generate html document once the data is changed. So, you tell nextjs to regenerate the html document after certain intervals of time such as 5 seconds, 1 hour etc. This technique is useful only if you know you donot need to make a api call to get latest data on every network request because your data doesnot change much. If the data changes very frequently, then it is just better to do a dynamic rendering.
 
-Dynamic Rendering means running the entire component again for each request. 
+Dynamic Rendering means running the entire component everytime for each request.  You can do it either on the server with server components or on the client side by shipping the code itself and executing in the browser. 
 
-Incremental Static Generation is used when you have pages which have combination of both static and dynamic data. Since, the component uses dynamic data, you cannot perform Static Generation. It also doesnot mean, you need to always run the component for every request. In a component, you can extract all the static content and create a html document out of it. Then, for the dynamic part, you can ship the javascript with that html document itself. This way, when the client gets the html, it shows the static content first, then executes the javascript which renders dynamic content. This process is also called hydration.  
+
+### What is hydration
+
+There are cases where you have a component that is a combination of both static data as well as dynamic data. So, you can neither generate the entire html before hand via static generation nor do you want to use dynamic rendering to run the entire component on each request. 
+
+In such cases. the ideal scenario is to generate the html document that only contains the static content and link the html document with the chunk of Javascript code needed to dynamically render content on that page.
+
+When a request comes, you send the html document. Browser renders the html content, makes a network call for Javascript and you send the needed Javascript back. This means, you donot ship the entire Javascript to the frontend. You only ship the Javascript that is needed. This process is called hydration.  
+
+
+### Default behavior of rendering
+
+By default, every component in nextjs will rendered as Static Generation i.e, it will be rendered once and reused on every request.
 
 
 
