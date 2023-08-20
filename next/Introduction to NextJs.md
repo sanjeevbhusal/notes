@@ -19,7 +19,26 @@ All the limitations of react above are solved by Nextjs.
 
 When you create a next project via (create-next-app), you get to decide if you want to use tailwind, typescript etc. Depending upon the choice, you will endup with different config files. Apart from config files, there are 2 directories, public and src.The main codebase will be under the src directory. Anything that is present in public will be accessible directly as a static file. 
 
-Nextjs uses Webpack as the module bundler. It will bundle everything inside the src directory in the single Javascript file.  Nextjs uses file based routing. This means, we donot have to use any routing library inside Nextjs. 
+Nextjs uses Webpack as the module bundler. It will bundle everything inside the src directory in the single Javascript file.  
 
-The /src directory should compulsorily have app directory. /src/app directory will serve as the routing point for any kind of routes in the application. If you want to render some component at /about, then you should create a about directory inside app directory. Next will map the directory structure with the routes in the url.
+
+### Src Directory Structure / Routing in Nextjs
+
+Nextjs uses file based routing. This means, we don't have to use any routing library inside Nextjs.  Inside the src directory we can have different files such as eslint files, gitignore etc. However, we must have a directory called app.
+
+/src/app directory will serve as the routing point for any kind of routes in the application. To render a certain component inside the root url (localhost:3000/), we must have at-least 2 files, layout.tsx and page.tsx.
+
+page.tsx should contain the actual component that should be rendered at the root url. 
+In page.tsx, you will not have the entire html structure such as, html, head, body element etc. You will just have the actual html element that user can see such as h1, p, etc. This means page.tsx doesnot contain the entire markup that should be rendered in the DOM.
+
+This is where layout.tsx comes in. Next will pass the component from page.tsx as a children to component in layout.tsx. Layout component is a higher order component. It takes a component as an argument and returns a new component. The new component will wrap the component passed in as an argument in some markup and return the complete markup.
+
+Generally, Layout.tsx will not contain metadata about the page itself. Metadata of the page is present in the head tag of the html document. Next will automatically generate the contents in the head tag.  We can also override this behavior.
+
+Both page.tsx and layout.tsx can have multiple components inside it. The component that
+
+
+root url, you will 
+
+If you want to render some component at /about, then you should create a about directory inside app directory. Next will map the directory structure with the routes in the url.
 
