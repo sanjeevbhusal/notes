@@ -161,8 +161,10 @@
   },
   "active": "0d0e1acbb77dd998",
   "lastOpenFiles": [
-    "react/Why you shouldn't use local storage for storing user session.md",
+    "nest/Nest can't resolve the dependency.md",
+    "nest",
     "react-query/Note on React Query.md",
+    "react/Why you shouldn't use local storage for storing user session.md",
     "react-query",
     "react/Research about Indexed DB.md",
     "devops/docker/ReadMe.md",
