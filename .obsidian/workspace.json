@@ -42,9 +42,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b3dff71d3ede1519",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "next/Next-auth.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "next/Introduction to NextJs.md",
+                "file": "next/Next-auth.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "next/Introduction to NextJs.md",
+                "file": "next/Next-auth.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "next/Introduction to NextJs.md"
+                "file": "next/Next-auth.md"
               }
             }
           }
@@ -171,10 +183,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e5ca9899444684e2",
+  "active": "b3dff71d3ede1519",
   "lastOpenFiles": [
-    "react-query/Note on React Query.md",
     "next/Introduction to NextJs.md",
+    "next/Next-auth.md",
+    "react-query/Note on React Query.md",
     "next",
     "nest/Nest can't resolve the dependency.md",
     "nest",
