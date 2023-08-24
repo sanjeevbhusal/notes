@@ -2,7 +2,7 @@
 
 Next-auth is a library used in Nextjs for authentication purposes. This library handles most/all of the authentication needs for almost all applications. 
 
-This library creates both frontend and backend part of the authentication. For backend authentication, you need to configure this library with some of the options. You need to put this configuration in /src/api/[...nextauth]/route.ts file. [...nextauth] directory is also known as catch all directory.
+This library creates both frontend and backend part of the authentication. For backend authentication, you need to configure this library with some of the options. You need to put this configuration in /src/api/auth/[...nextauth]/route.ts file. [...nextauth] directory is also known as catch all directory.
 
 Next-auth supports email and pasword based authentication as well as authentication with google, github, microsoft etc. All of the authentication with all these third party providers will be taken care of by next-auth itself. 
 
@@ -21,5 +21,8 @@ Next-auth makes it preety easy to declare both GET and POST functions.  You have
 
 
 Next-auth requires a secret key in order to encrypt jwt token. So, you need to declare a secret key in the environment file. 
+
+Once you have exported both GET and POST function and set up the secret key, some routes will be created for you by next-auth. One of such route is localhost:3000/api/auth/signin. When you visit this route, you will see a signin page. The signin page could have multiple options to signin such as Github, Google, email and password etc based upon the providers you selected while configuring next-auth. 
+
 
 
