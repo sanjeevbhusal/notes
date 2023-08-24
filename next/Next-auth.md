@@ -15,3 +15,11 @@ Configuring each provider takes different arguments.
 -  Google Provider: This provider will need you to specify certain values such as Secret Key, Client Key etc that can be obtained via Google Developer Console. You also need to specify some other details discussed in Credentials Provider
 
 
+In nextjs, if you want to expose api's you should create function which name are based  upon HTTP Verb such as GET, POST.  Since, next-auth is a authorization library, it handles both get request as well as post request.  Get request is needed if you want to validate a user session. POST request is needed if you want to send the credentials inorder to log in.
+
+Next-auth makes it preety easy to declare both GET and POST functions.  You have to create a function known as handler. Then you need to export this function as both GET and POST. This way, whenever there is an api call to this route, nextjs will either call GET or POST function. Although both GET and POST function is the same, next-auth under the hood will run the correct code based upon the request verb.
+
+
+Next-auth requires a secret key in order to encrypt jwt token. So, you need to declare a secret key in the environment file. 
+
+
