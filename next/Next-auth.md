@@ -8,6 +8,10 @@ Next-auth supports email and pasword based authentication as well as authenticat
 
 Next-auth has a concept of Provider. If you want to authenticate with Google, you need to configure next-auth to use Google Provider. If you want to authenticate with simple email and password, you need to use Credentials Provider. All of these Providers are present in the package itself. We just need to tell next-auth which are the providers we want to use and configure those providers.
 
+Configuring each provider takes different arguments. 
 
+- Credentials Provider: This provider will need you to specify which fields you need, what should be their type, label etc. Based on this Input, it will automatically generate the form. You should also specify the logic for validating the user supplied input against your database schema. After successful validation, you might want to return to a certain url. You should also specify it. 
+
+-  Google Provider: This provider will need you to specify certain values such as Secret Key, Client Key etc that can be obtained via Google Developer Console. You also need to specify some other details discussed in Credentials Provider
 
 
