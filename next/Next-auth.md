@@ -27,19 +27,23 @@ Once you have exported both GET and POST function and set up the secret key, som
 Lets say, we used CredentialsProvider while configuring next-auth. This means at this route we will see a input page for email and password. We fill the data and make the request.
 The request goes to localhost:3000/api/auth/callback/credentials. This is a route that is exposed by next-auth itself. When the request reaches the route, next-auth runs the code that we defined while setting up Credentials Provider. The code generally includes logic to  make a database call and validate if the user exists.
 
-
 If the user exists, next-auth will return a 200 status code. However, next-auth will set a redirect location as well. This means, the browser will redirect the user to some other location. This is expected since we donot want user to be in login page if the request was successful. We donot have to explicitly run some redirect function just as we used to do in react-router-dom.  This means, when you inspect the request through devtools, you will find couple of things such as 
 
 - The status code will be 302 found.  
 - The response header will consist of location property. This is the url where browser will redirect the user.
 - next-auth will also set the session cookie for subsequent request validation.
 
-
 Now, the next important part will be to actually get the user present in the session in order to know who is the logged in user. The way we do this actually differs in client component and server component. In total, you might need session information in 3 places.
 
 - React Server Component (runs in server)
 - Api routes  (runs in server)
 - Client Component (runs in browser)
+
+- React Server Component:  In order to get session information from react server component, you can use a hook called getServerSession() and pass the options object that you configured while setting up nex-auth as a argument.
+
+- Api Routes: It is same as React Server Component. You just call getServerSesscion() in the api route itself.
+
+- Client Component: Next-auth cannot decode the jwt session token in the client.
 
 
 
