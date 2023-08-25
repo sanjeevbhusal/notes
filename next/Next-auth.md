@@ -43,7 +43,7 @@ Now, the next important part will be to actually get the user present in the ses
 
 - Api Routes: It is same as React Server Component. You just call getServerSesscion() in the api route itself.
 
-- Client Component: Next-auth cannot decode the jwt session token in the client.
+- Client Component: Next-auth cannot decode the jwt session token in the client. It needs to do it in the server. Hence, the first-time you try to get session information in the client, a network request will be made. After the session data arrives, next-auth will store this session information in a Context Provider. This Context Provider and the hook that will retrieve the data from the provider is already made available by next-auth.
 
 
 
