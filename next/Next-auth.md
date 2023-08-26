@@ -48,7 +48,12 @@ Now, the next important part will be to actually get the user present in the ses
 next-auth provides 2 function called signIn and signOut. signIn function will redirect user to signin page whereas signout function will remove the session from cookie.
 
 
-When next-auth takes the user information and creates a jwt token, we need a way to specify which property should it use in the token. This way, when the session cookie is decoded, we have all the values that we need for the user. 
+When we enter our credentials to log in, either via credential provider or third party provider, next-auth will first create the jwt token and then set the cookie in the request. Once, the session token is set, next-auth will then make another request to get the user in the session. 
+
+When next-auth takes the user information and creates a jwt token, it doesnot know which are the fields it needs to include in the token body. So, by default, it takes name, email and picture. If we need to customize it, we can do so by using the callback feature in the next-auth configuration. 
+
+callback is a object that can be passed while configuring next-auth. It takes many properties. One of the property is jwt. It is a function that will be called by next-auth anytime it creates a jwt or decodes the jwt. It takes a object as a parameter. One of the fields in the object is user. user field will only be present if we are authenticating or the first time (i.e. user session is not present in the browser yet.). the value of this field will be the values that you submit through credentials provider (email, password etc) or value returned by third party providers.
+
 
 
 
