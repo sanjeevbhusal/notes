@@ -48,4 +48,9 @@ Now, the next important part will be to actually get the user present in the ses
 next-auth provides 2 function called signIn and signOut. signIn function will redirect user to signin page whereas signout function will remove the session from cookie.
 
 
+When next-auth takes the user information and creates a jwt token, we need a way to specify which property should it use in the token. This way, when the session cookie is decoded, we have all the values that we need for the user. 
+
+
+
+
 
