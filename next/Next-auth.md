@@ -52,8 +52,7 @@ When we enter our credentials to log in, either via credential provider or third
 
 When next-auth takes the user information and creates a jwt token, it doesnot know which are the fields it needs to include in the token body. So, by default, it takes name, email and picture. If we need to customize it, we can do so by using the callback feature in the next-auth configuration. 
 
-callback is a object that can be passed while configuring next-auth. It takes many properties. One of the property is jwt. It is a function that will be called by next-auth anytime it creates a jwt or decodes the jwt. It takes a object as a parameter. One of the fields in the object is user. user field will only be present if we are authenticating or the first time (i.e. user session is not present in the browser yet.). the value of this field will be the values that you submit through credentials provider (email, password etc) or value returned by third party providers.
-
+callback is a object that can be passed while configuring next-auth. It takes many properties. One of the property is jwt. It is a function that will be called by next-auth anytime it creates a jwt or decodes the jwt. It takes a object as a parameter. One of the fields in the object is user. user field will only be present if we are authenticating or the first time (i.e. user session is not present in the browser yet.). the value of this field will be the values that you return through the authorize function. 
 
 
 
