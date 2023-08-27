@@ -52,7 +52,14 @@ When we enter our credentials to log in, either via credential provider or third
 
 When next-auth takes the user information and creates a jwt token, it doesnot know which are the fields it needs to include in the token body. So, by default, it takes name, email and picture. If we need to customize it, we can do so by using the callback feature in the next-auth configuration. 
 
-callback is a object that can be passed while configuring next-auth. It takes many properties. One of the property is jwt. It is a function that will be called by next-auth anytime it creates a jwt or decodes the jwt. It takes a object as a parameter. One of the fields in the object is user. user field will only be present if we are authenticating or the first time (i.e. user session is not present in the browser yet.). the value of this field will be the values that you return through the authorize function. 
+callback is a object that can be passed while configuring next-auth. It takes many properties. 2 properties that we will need always are jwt and session. both of them are functions. Both of them receive a object as a argument. The object has various fields such as session, token, user etc. 
+
+In case of jwt function, the goal of the function is to return back a token object. When user enters the credentials for the first time (when they log in), it is passed to jwt function in the user field. The function will then decide which fields should be present while creating the jwt token. It typically includes user Id, user email etc.
+
+Once jwt function has been called, session function will be called. The session function's job is to return back a object. This is the object next-auth will return whenever someone requests session information either from client component or server component. 
+
+This means, when someone request to get the session information, next-auth will first decrypt the data in the session token. Then the data is passed to jwt function in the token field. jwt function will then return the same token from the function without any modification. next-auth will then call session function and pass the return value of jwt in the token field. session function can then decide what fields it should return to the original session request.  
+
 
 
 
