@@ -71,7 +71,7 @@ You can use Protected Routes in 3 ways.
 
 1) Client Side Protection: In Client side Protection, you just call getSession() function and check if a session exists or not.
 2) Server Side Protection: In Server Side Protection, you just call getServerSession() function and check if a session exists or not.
-3) Middleware: In Middleware, you can set up routes url that should be protected. Next-aut 
+3) Middleware: In Middleware, you can set up routes url that should be protected. Next-auth will check itself if there is a session and if not, will redirect to signin page. 
 
 
 
