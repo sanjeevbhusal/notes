@@ -61,6 +61,18 @@ Once jwt function has been called, session function will be called. The session 
 This means, when someone request to get the session information, next-auth will first decrypt the data in the session token. Then the data is passed to jwt function in the token field. jwt function will then return the same token from the function without any modification. next-auth will then call session function and pass the return value of jwt in the token field. session function can then decide what fields it should return to the original session request.  
 
 
+### Protected Routes
+
+You can use Protected Routes in 3 ways.
+
+1) Client Side Protection
+2) Server Side Protection
+3) Middleware
+
+1) Client Side Protection: In Client side Protection, you just call getSession() function and check if a session exists or not.
+2) Server Side Protection: In Server Side Protection, you just call getServerSession() function and check if a session exists or not.
+3) Middleware: In Middleware, you can set up routes url that should be protected. Next-aut 
+
 
 
 
