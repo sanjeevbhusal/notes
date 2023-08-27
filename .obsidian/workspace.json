@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3ffd9f93e8a6422b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "What is OAuth?.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "next/Next-auth.md",
+                "file": "What is OAuth?.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "next/Next-auth.md",
+                "file": "What is OAuth?.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "next/Next-auth.md"
+                "file": "What is OAuth?.md"
               }
             }
           }
@@ -159,12 +171,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b3dff71d3ede1519",
+  "active": "3ffd9f93e8a6422b",
   "lastOpenFiles": [
+    "next/Next-auth.md",
+    "What is OAuth?.md",
     "next/Introduction to NextJs.md",
     "react-query/Note on React Query.md",
     "react/Why you shouldn't use local storage for storing user session.md",
-    "next/Next-auth.md",
     "next",
     "nest/Nest can't resolve the dependency.md",
     "nest",
