@@ -1,4 +1,6 @@
 
+# Introduction
+
 Google has a lot of services such as gmail, search engine, maps etc. A lot of this services can be managed via google workspace.
 
 Google workspace is a term for products such as Drive, Gmail, Google Chat etc. If you want to connect your application with any of these Google workspace products, you can do so via Google cloud console.
@@ -23,4 +25,15 @@ There are 6 main sections/options in the Google Workspace page. They are Overvie
 - Credentials is a place where you can create, edit and delete credentials to access the APIs for enabled Google Workspace Products. 
 
 - Product Library is a place where you can explore all the available Google Workspace Products in more detail.
+
+
+# Google Workspace API Explorer
+
+Google has a Workspace API Explorer at https://developers.google.com/workspace/explore. You can click any API you want and view the details of the API. You can see the parameters the API takes and execute the API itself in the browser. 
+
+You also have to perform authentication/authorization directly in the browser itself. 
+
+
+
+
 
