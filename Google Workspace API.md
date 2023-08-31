@@ -59,11 +59,18 @@ There are mainly 2 parts to authentication, Authenticating your app and Authenti
 
 - **Authenticating your end user:** Once the app is authenticated, google needs to authenticate the end user who wants to access their resources. If your application needs to have access to user's public profile (email, name, profile picture etc), then you must first ask the user for permission. You cannot just access their private/public information through google API. Google wants you to first configure the permission you need in the  OAuth Consent Screen Section located at API and Services > OAuth Consent Screen. 
 	
-	 - **OAuth Consent Screen**:  This is a screen that will be shown to end user. This screen contains information regarding the application name, developer email address and permissions the applications wants from user. User can either consent to giving all the permissions asked in the consent screen or reject it completely. They cannot choose to give consent to some of the asked permission and reject others. While confThe contents shown in the Consent Screen has to be configured 
+	 - **OAuth Consent Screen**:  This is a screen that will be shown to end user. This screen contains information regarding the application name, developer email address and permissions the applications wants from user. User can either consent to giving all the permissions asked in the consent screen or reject it completely. They cannot choose to give consent to some of the asked permission and reject others. 
+	  
+	 - **Scopes:** The permission you see on the consent screen are known as Scopes. A Scope determine the kind of resources/actions application can perform on user's behalf. These scopes could be Accessing user's public profile, accessing emails in user's gmail, deleting files from user's google drive etc. These will be different for each application depending upon its needs.  
+	
+	 - Access Token: Once user has agreed to the consent screen, google will create a token known as access Token. This token has all the information related to the user and their agreed permission. If the application make request to google API with this access Token, then it will be able to perform actions on the user behalf. When the request is sent, google will analyze the access token and do the following:
+	 
+		 - **Authenticate user**: Google will first check the Authentication part i.e. the user making the request. It will confirm details such as the existence of the user's google account, make sure the account is not blocked etc.
+		 
+		 - **Authorize use**: Google will then see what are the actions user can perform through the scopes agreed in the consent screen above. If the action performed by the endpoint is listed under the scopes/permissions, then google will perform the action. If user donot have permission for the action, google will reject the request.  
+   
 
-
-
-
+ 
 
 ![[Pasted image 20230831181838.png]]
 
