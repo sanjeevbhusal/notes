@@ -34,6 +34,28 @@ Google has a Workspace API Explorer at https://developers.google.com/workspace/e
 You also have to perform authentication/authorization directly in the browser itself. 
 
 
+# 4 Steps to Working with Google Workspace Apps
+
+
+1) Create a Google Cloud Project.
+2) Enable APIs according to your requirement.
+3) Set up OAuth Consent Screen
+4) Create access Credentials
+
+
+We have already discussed about Step 1 and Step 2 above. Step 3 and Step 4 falls under Authentication and Authorization. Now, we will discuss more about authentication and authorization with Google Workspace API.
+
+
+
+# Authentication and Authorization with Google Workspace API
+
+Authentication is a mechanism used to verify the identity of the user making the request whereas Authorization is a mechanism used to verify the access rights for a particular resource. Authentication is a prerequisite for Authorization.
+
+Consider the following simplified example of a hotel reservation. When you arrive at the hotel, the front desk clerk requests your ID to verify your reservation. Your ID _authenticates_ you to the hotel. The front desk clerk gives you a hotel key. This key gives you access to certain resources at the hotel such as your hotel room, the gym, and the business center. The hotel key _authorizes_ you to access those resources.
+
+
+![[Pasted image 20230831181838.png]]
+
 
 
 
