@@ -67,13 +67,14 @@ There are mainly 2 parts to authentication, Authenticating your app and Authenti
 	 
 		 - **Authenticate user**: Google will first check the Authentication part i.e. the user making the request. It will confirm details such as the existence of the user's google account, make sure the account is not blocked etc.
 		 
-		 - **Authorize use**: Google will then see what are the actions user can perform through the scopes agreed in the consent screen above. If the action performed by the endpoint is listed under the scopes/permissions, then google will perform the action. If user donot have permission for the action, google will reject the request.  
+		 - **Authorize use**r: Google will then see what are the actions user can perform through the scopes agreed in the consent screen above. If the action performed by the endpoint is listed under the scopes/permissions, then google will perform the action. If user donot have permission for the action, google will reject the request.  
    
-
+	
+Here is the pictorial representation of the above flow:
+ 
+![[Pasted image 20230831181838.png]]
  
 
-![[Pasted image 20230831181838.png]]
-
-
-
+Here is the Authentication docs from google: 
+https://developers.google.com/workspace/guides/auth-overview#process_overview
 
