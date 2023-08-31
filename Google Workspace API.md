@@ -53,6 +53,17 @@ Authentication is a mechanism used to verify the identity of the user making the
 
 Consider the following simplified example of a hotel reservation. When you arrive at the hotel, the front desk clerk requests your ID to verify your reservation. Your ID _authenticates_ you to the hotel. The front desk clerk gives you a hotel key. This key gives you access to certain resources at the hotel such as your hotel room, the gym, and the business center. The hotel key _authorizes_ you to access those resources.
 
+There are mainly 2 parts to authentication, Authenticating your app and Authenticating your user.
+
+- **Authenticating your app**: When you make a request to any google workspace API, you have to authenticate yourself. This authentication is not for the end user. This is for Google to know which project is sending the request. Google stores all the metrics for requests made to its API's. Hence, it should know which project is the one making the request. It does so by using a API token. You can generate a API token in the API and Services > Credentials section. The token uniquely identifies your project. You have to send this token with every request you make to google Api.    
+
+- **Authenticating your end user:** Once the app is authenticated, google needs to authenticate the end user who wants to access their resources. If your application needs to have access to user's public profile (email, name, profile picture etc), then you must first ask the user for permission. You cannot just access their private/public information through google API. Google wants you to first configure the permission you need in the  OAuth Consent Screen Section located at API and Services > OAuth Consent Screen. 
+	
+	 - **OAuth Consent Screen**:  This is a screen that will be shown to end user. This screen contains information regarding the application name, developer email address and permissions the applications wants from user. User can either consent to giving all the permissions asked in the consent screen or reject it completely. They cannot choose to give consent to some of the asked permission and reject others. While confThe contents shown in the Consent Screen has to be configured 
+
+
+
+
 
 ![[Pasted image 20230831181838.png]]
 
