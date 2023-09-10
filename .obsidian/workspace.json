@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Google Workspace API.md",
+                "file": "next/Next-auth.md",
                 "mode": "source",
                 "source": false
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Google Workspace API.md",
+                "file": "next/Next-auth.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Google Workspace API.md",
+                "file": "next/Next-auth.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Google Workspace API.md"
+                "file": "next/Next-auth.md"
               }
             }
           }
@@ -197,14 +197,14 @@
   },
   "active": "0f64c89596c12cdb",
   "lastOpenFiles": [
-    "Pasted image 20230831181838.png",
-    "Google API Authorization and Authentication.md",
+    "next/Introduction to NextJs.md",
+    "next/Next-auth.md",
     "Google Workspace API.md",
+    "Google API Authorization and Authentication.md",
+    "Pasted image 20230831181838.png",
     "What is OAuth?.md",
     "Pasted image 20230831173348.png",
     "Pasted image 20230831173101.png",
-    "next/Next-auth.md",
-    "next/Introduction to NextJs.md",
     "react-query/Note on React Query.md",
     "react/Why you shouldn't use local storage for storing user session.md",
     "next",
