@@ -61,7 +61,9 @@ As discussed above, all these layers are built on top of one another. This gives
 
 ## Explaning all Layers of OSI Model
 
-Each Layer in OSI Model has some specific functionalities. We will start to exploring from Layer 7 all the way to Layer 1.
+Each Layer in OSI Model has some specific functionalities. Comparing it in terms of programming concept, we can say that OSI Model has a very good seperation of concerns. Each layer is concerned with just one or couple of things and doesnot care about how other layers are going to handle the data. 
+
+We will start to exploring from Layer 7 all the way to Layer 1.
 
 ### Layer 7 (Application Layer)
 
