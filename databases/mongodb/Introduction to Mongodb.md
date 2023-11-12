@@ -43,4 +43,26 @@ Mongodb uses a technique called Sharding, which distributes data across many nod
 
 ## Data Insertion
 
-When you insert a document 
+When you insert a document inside a collection, you donot need to create the collection first. Mongodb will create the collection and then insert the document. 
+
+This would be similar to if relational databases didn't need to create a table first before inserting any rows. However, you have to first create a table.
+
+
+## Creating Collection manually
+
+You can however create a collection manually as well. If you create a collection manually, you have options to set up the maximum size and document validation rule as well. If not, there is no need to create a collection first.
+
+
+## Document validation / Schema validation
+
+A collection can store documents with different schema (key/value pairs). However you can also configure the collection to ensure all the documents have the same schema, just like tables do in relational databases. If you are deploying your mongodb database in mongodb atlas, it will automatically detect issues with the schema and tell you via the User Interface.
+
+
+## Updating Document
+
+You can update a document by inserting a new key value pair, deleting a key value pair, updating existing value for a key etc. 
+
+
+## Unique Identifier (UUID)
+
+Every Collection in Mongodb gets a unique Identifier. It is a immutable value. The collection uuid value is same across all the nodes if a replica set is used.
