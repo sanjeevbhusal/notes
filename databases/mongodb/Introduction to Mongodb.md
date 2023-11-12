@@ -66,3 +66,10 @@ You can update a document by inserting a new key value pair, deleting a key valu
 ## Unique Identifier (UUID)
 
 Every Collection in Mongodb gets a unique Identifier. It is a immutable value. The collection uuid value is same across all the nodes if a replica set is used.
+
+
+## Query Operators
+
+Mongodb has various query operators used in order to select a specific document. All these Query operators are basically ways to implement Comparison statements(greater than, less than, equal to etc), Logical statements(or, and, nor, not etc) etc. 
+
+Mongodb has commands which can be used to perform comparison, logic, bitwise operation, array operations etc. 
