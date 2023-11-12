@@ -12,9 +12,35 @@ Since a value can refer to another document, this eliminates the need for join o
 
 Since, each document is a different entity, you could store different key value pairs. This means there is no schema to be defined beforehand. Hence, they are more flexible than  SQL databases.
 
-Mongodb is also extremely fast due to less Input/Output operations. Since a document can contain a field which value is another document, it reduces the read time n
+Mongodb is also extremely fast due to less Input/Output operations. Since a document can contain a field which value is another document, it reduces the read time needed for JOIN operations in relational databases. 
+
+Mongodb also supports indexes which lets it speed up a query.
 
 
 ## Collection
 
 MongoDB stores documents inside a collection. A collection is similar to table in a relational database. 
+
+
+## Database
+
+A Database in Mongodb stores one or more collection.
+
+
+## High availability
+
+Mongodb can store the same data across various nodes. This increases data redundancy and provides high availability. This replication technique is called replica set. 
+
+A replica set is a collection of computers/nodes running mongodb which store the same data.
+
+
+## Horizontal Scalability
+
+Horizontal Scalability refers to the ability to scale a software by provisioning more nodes/computers instead of increasing the current computers capability.
+
+Mongodb uses a technique called Sharding, which distributes data across many nodes.
+
+
+## Data Insertion
+
+When you insert a document 
