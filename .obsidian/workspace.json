@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d2674c6d8ef68caa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "concurrency and parallelism.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "databases/mongodb/Introduction to Mongodb.md",
+                "file": "concurrency and parallelism.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "databases/mongodb/Introduction to Mongodb.md",
+                "file": "concurrency and parallelism.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "databases/mongodb/Introduction to Mongodb.md"
+                "file": "concurrency and parallelism.md"
               }
             }
           },
@@ -157,13 +170,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "db7330ce35d2bb6c",
+  "active": "d2674c6d8ef68caa",
   "lastOpenFiles": [
+    "databases/mongodb/Introduction to Mongodb.md",
+    "concurrency and parallelism.md",
+    "Untitled",
     "databases/mongodb/files",
     "databases/mongodb/files/Pasted image 20231112100831.png",
     "2023-11-12.md",
     "Untitled.canvas",
-    "databases/mongodb/Introduction to Mongodb.md",
     "Pasted image 20230831181838.png",
     "databases/mongodb",
     "databases",
