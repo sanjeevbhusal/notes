@@ -4,7 +4,7 @@ We can deploy a single container through docker using the following command
 ```shell
 docker run -d -p 80:80 nginx
 ```
-
+ 
  Lets say our application is growing and now we need more than one instance of the container. We can do this by running the same command again. Now, we need to set some kind of load balancer to sit infront of the instance. we then register both the instances to the load balancer. Now, all our user requests shoudl be sent to load balancer which automatically forwards them to one of the underlying instance.  Lets assume that user load has incerased and 2 instances are not enough. We then have to run the command again to deploy more instances and register them to load balancer. 
  
  Lets assume that the load is still increasing and we need to deploy at least 2 new instances of the container. We also realize that we have used all our hardware resource and can't deploy a new container on the same machine. In such scenario, we will first create a new virtual machine and install docker on it. We will then pull the image and run the command twice to run 2 containers. We will then register both the containers with the load balancer. 

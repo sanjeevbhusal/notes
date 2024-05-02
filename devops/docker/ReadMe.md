@@ -1,4 +1,4 @@
-![docker cheatsheet](./docker-cheatsheet.png)
+****![docker cheatsheet](./docker-cheatsheet.png)
 
 # Lets say you have 2 applications in a virtual machine. Both application require a configuration file called 'file1.py' in /xyz directory. But the catch is that the contents of that file has to be different for both the application to run perfectly. You cannot acheive this in a single virtual machine. You need to move one of the application to another virtual machine. Docker solves this issue.
 

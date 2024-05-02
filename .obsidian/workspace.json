@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "aa57d35e53bd93a9",
+        "id": "507c99a29e5b79fd",
         "type": "tabs",
         "children": [
           {
-            "id": "710b3b9596683371",
+            "id": "d3343b9dfec53de4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "databases/mongodb/Introduction to Mongodb.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d2674c6d8ef68caa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "concurrency and parallelism.md",
+                "file": "devops/docker/ReadMe.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 362.5,
-    "collapsed": true
+    "width": 310.5
   },
   "right": {
     "id": "4415f1d1a95d8497",
@@ -99,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "concurrency and parallelism.md",
+                "file": "devops/docker/ReadMe.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "concurrency and parallelism.md",
+                "file": "devops/docker/ReadMe.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "concurrency and parallelism.md"
+                "file": "devops/docker/ReadMe.md"
               }
             }
           },
@@ -172,10 +158,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d2674c6d8ef68caa",
+  "active": "d3343b9dfec53de4",
   "lastOpenFiles": [
-    "databases/mongodb/Introduction to Mongodb.md",
+    "devops/docker/Docker file storage.md",
+    "devops/docker/docker volume.md",
+    "devops/docker/Docker Container Isolation.md",
+    "devops/docker/ReadMe.md",
+    "devops/Serverless-Deployment/ReadMe.md",
+    "Google Workspace API.md",
+    "devops/docker/Docker Storage Drivers.md",
+    "machine-learning/Topic-2 (machine-learning-workflow)/Note-1.md",
+    "machine-learning/Topic-1 (introduction-to-machine-learning)/Note-2 (types of machine learning).md",
+    "devops/kubernetes/Container Orchestration In a Nutshell.md",
+    "devops/gitlab-ci-cd/notes/Gitlab-CI.md",
+    "devops/docker/manager-worker-nodes-4.png",
+    "devops/docker/manager-worker-nodes-3.png",
+    "devops/docker/manager-worker-nodes.png",
+    "devops/docker/docker-cheatsheet.png",
+    "devops/docker/Docker networking.md",
+    "devops/docker/Docker Layered Architecture.md",
     "concurrency and parallelism.md",
+    "databases/mongodb/Introduction to Mongodb.md",
     "Untitled",
     "databases/mongodb/files",
     "databases/mongodb/files/Pasted image 20231112100831.png",
@@ -189,7 +192,6 @@
     "What is OAuth?.md",
     "Google API Authorization and Authentication.md",
     "devops/Networking/OSI Model.md",
-    "Google Workspace API.md",
     "Pasted image 20230831173348.png",
     "Pasted image 20230831173101.png",
     "react-query/Note on React Query.md",
@@ -199,10 +201,7 @@
     "nest",
     "react-query",
     "react/Research about Indexed DB.md",
-    "devops/docker/ReadMe.md",
     "devops/devops-overview/ReadMe.md",
-    "react",
-    "devops/devops-overview/notes/engineer-perspective.md",
-    "assets/docker-container-isolation.md"
+    "react"
   ]
 }
