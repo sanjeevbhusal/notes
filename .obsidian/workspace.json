@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "73042850709efe64",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "scratch/When a comment is added to a request thread, we create notifications..md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "devops/docker/ReadMe.md",
+                "file": "scratch/When a comment is added to a request thread, we create notifications..md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "devops/docker/ReadMe.md",
+                "file": "scratch/When a comment is added to a request thread, we create notifications..md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "devops/docker/ReadMe.md"
+                "file": "scratch/When a comment is added to a request thread, we create notifications..md"
               }
             }
           },
@@ -158,12 +171,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d3343b9dfec53de4",
+  "active": "73042850709efe64",
   "lastOpenFiles": [
+    "scratch/When a comment is added to a request thread, we create notifications..md",
+    "devops/docker/ReadMe.md",
+    "scratch",
     "devops/docker/Docker file storage.md",
     "devops/docker/docker volume.md",
     "devops/docker/Docker Container Isolation.md",
-    "devops/docker/ReadMe.md",
     "devops/Serverless-Deployment/ReadMe.md",
     "Google Workspace API.md",
     "devops/docker/Docker Storage Drivers.md",
@@ -179,7 +194,6 @@
     "devops/docker/Docker Layered Architecture.md",
     "concurrency and parallelism.md",
     "databases/mongodb/Introduction to Mongodb.md",
-    "Untitled",
     "databases/mongodb/files",
     "databases/mongodb/files/Pasted image 20231112100831.png",
     "2023-11-12.md",
@@ -201,7 +215,6 @@
     "nest",
     "react-query",
     "react/Research about Indexed DB.md",
-    "devops/devops-overview/ReadMe.md",
     "react"
   ]
 }
