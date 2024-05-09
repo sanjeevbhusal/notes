@@ -7,6 +7,9 @@ In order to handle such requirement, every payment system will multiply the valu
 
 This is not limited to only decimal values. If you want to store 100 dollars, it will be stored as 10000 (`100 * 100`) in database. And when the frontend receives the data, it changes it back to 100. 
 
-However, you have to limit the decimal values you want to support. Example: If user wants to store `0.757684`
+However, you have to limit the decimal values you want to support. Example: If user wants to store `0.757684`, and you multiply it by 100, you get `75.7684`. This is a value that has precision point. One way to solve this problem is to increase the multiply value from 100 to a bigger number. However this just complicates things. 
 
-Since we are no longer dealing with precision values (`decimal values`), we donot care how our programming language handles the precision value. 
+In most of the cases, users donot care money beyond the cent. In that case, you could restrict user to only support 2 decimal points value. So, transfer of `0.75` is supported but transfer of `0.755` is not supported. If you go with 2 decimal points, you have to multiply the value by `100`. If you instead decide to support upto `3` decimal points, you have to multiply the value by `1000`
+
+> [!info] Conclusion
+> Since we are no longer dealing with precision values (`decimal values`), we donot care how our programming language handles the precision value. 
