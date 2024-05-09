@@ -22,6 +22,16 @@ If the balance is greater than the amount, the code proceeds forward. We then de
 
 ![[Pasted image 20240509140441.png]]
 
-Lets imagine we send 2 api calls at the same time to the above `/transfer` endpoint. Lets assume account A has enough balance to send to account B.
+Lets imagine we send 2 api calls at the same time to the above `/transfer` endpoint. Lets assume account A has enough balance to send to account B. The first api call will proceed with the balance check condition. The execution will then move to the code that deducts the money from account A and adds it to account B.
 
-The first api call will proceed with the balance check condition. The e
+At this same time, the request from api call 2 also arrives at the server. The server processes the request and checks if account A has enough balance. Since the execution from first api call has yet not persisted the updated balance to database, the balance check passes. 
+
+Now, the balance is updated from execution of first api call. But the balance is again updated from execution of second api call. This means, we deducted the amount twice for account A while added the double amount to account B.    
+
+**How Transaction solve this issue**
+
+If we use transaction while persisting the updated balance to database, any other database operation that modifies the same data will result in our transaction failing. This means, the first api call would succeed but the second api call would fail since it tried to update the balance from the account that was part of the transaction.
+
+To Learn more: 
+- https://stackoverflow.com/questions/63541103/concurrent-requests-transaction-to-prevent-unwanted-persistence
+- https://medium.com/how-the-web-works/how-does-a-database-server-handle-thousands-of-concurrent-requests-d54352310183
