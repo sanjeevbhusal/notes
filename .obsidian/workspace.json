@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "scratch/When a comment is added to a request thread, we create notifications..md",
+                "file": "databases/mongodb/Transactions.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "scratch/When a comment is added to a request thread, we create notifications..md",
+                "file": "databases/mongodb/Transactions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "scratch/When a comment is added to a request thread, we create notifications..md",
+                "file": "databases/mongodb/Transactions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "scratch/When a comment is added to a request thread, we create notifications..md"
+                "file": "databases/mongodb/Transactions.md"
               }
             }
           },
@@ -173,7 +173,11 @@
   },
   "active": "73042850709efe64",
   "lastOpenFiles": [
+    "Pasted image 20240509140441.png",
+    "Pasted image 20240509140353.png",
+    "Pasted image 20240509140308.png",
     "scratch/When a comment is added to a request thread, we create notifications..md",
+    "databases/mongodb/Transactions.md",
     "devops/docker/ReadMe.md",
     "scratch",
     "devops/docker/Docker file storage.md",
@@ -211,10 +215,8 @@
     "react-query/Note on React Query.md",
     "react/Why you shouldn't use local storage for storing user session.md",
     "next",
-    "nest/Nest can't resolve the dependency.md",
     "nest",
     "react-query",
-    "react/Research about Indexed DB.md",
     "react"
   ]
 }
