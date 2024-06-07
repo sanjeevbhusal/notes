@@ -1,5 +1,5 @@
 
-Django Ninja automatically provides a documentation page via swagger UI or Redoc. The documentation page is served in route `/api/docs`. 
+Django Ninja automatically provides a documentation page via swagger UI or Redoc. The documentation page is served in route `/api/docs`. It is available without any d  [[How django ninja serves default documentation]]
 
 To go to the documentation page locally, hit: `http://localhost:8000/api/docs`. It is available without any authentication.
 
