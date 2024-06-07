@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ef13f5ac8a5b1ccb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Securitypal/Public Facing URLS.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Securitypal/API Documentation.md",
+                "file": "Securitypal/Public Facing URLS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Securitypal/API Documentation.md",
+                "file": "Securitypal/Public Facing URLS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Securitypal/API Documentation.md"
+                "file": "Securitypal/Public Facing URLS.md"
               }
             }
           },
@@ -158,15 +171,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "84cbd5dd08441922",
+  "active": "ef13f5ac8a5b1ccb",
   "lastOpenFiles": [
-    "How django ninja serves default documentation.md",
+    "Securitypal/How django ninja serves default documentation.md",
     "Securitypal/API Documentation.md",
+    "Securitypal/Public Facing URLS.md",
     "devops/docker/ReadMe.md",
     "devops/Continuous-Integration/ReadMe.md",
     "databases/mongodb/Transactions.md",
     "Untitled.canvas",
-    "Untitled.md",
     "What is OAuth?.md",
     "Securitypal",
     "Why you donot store decimal values in database.md",

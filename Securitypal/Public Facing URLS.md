@@ -1,0 +1,3 @@
+Securitypal also needs to be able to communicate with external applications such as slack, salesforce etc. However, not all api endpoints need to be externally available. Some of the api endpoints such as creating questionnaire task needs to be available publicly. However, we also need to know the identity of the user sending the request. Hence, these endpoints are not completely public. You need a api key to authenticate with this endpoints. 
+
+Currently, we expose 2 main urls that are publicly available. `/api/v1` and `/api/v1beta`/ . `/api/v1beta` is the new implementation of `/api/v1`. This new implementation contain better information around the schemas of the public endpoints.  

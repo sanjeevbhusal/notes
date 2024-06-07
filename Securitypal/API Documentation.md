@@ -1,4 +1,4 @@
 
 Django Ninja automatically provides a documentation page via swagger UI or Redoc. The documentation page is served in route `/api/docs`. It is available without any authentication.  [[How django ninja serves default documentation]]
 
-We have a django app called `documentation`. This app exposes a api endpoint `/docs`. This endpoint is protected via app authentication. So, to reach the `/docs` endpoint, you need to hit `http://localhost:8000/api/documentation/docs`
+We have a django app called `documentation`. This app exposes a api endpoint `/docs`. This endpoint is protected via app authentication. So, to reach the `/docs` endpoint, you need to hit `http://localhost:8000/api/documentation/docs`. However, since this a authenticated endpoint, you need to add the token in authorization header. This endpoint returns a json response with all the endpoints information according to openapi spec. 
