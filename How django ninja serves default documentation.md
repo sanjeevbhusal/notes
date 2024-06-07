@@ -8,3 +8,5 @@ When you visit the docs page, these are the things that happen.
 - This html file also has a link to `/api/openapi.json`. This is a predefined url in django ninja. When request gets sent to this url, django ninja will take all the registered api endpoint and make a json file called openapi.json. This json file has all the api routes registered, the params type that they take, the response type that they send etc.  
 - When css, javascript, and openapi.json file is downloaded, javascript will then construct a html page. This page is the final documentation page.
 
+> [!info]
+> This default documentation is not available in production
