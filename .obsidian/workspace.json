@@ -37,14 +37,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Why you donot store decimal values in database.md",
+                "file": "Securitypal/Documentation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "302761cb34e8bd12",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "How django ninja serves default documentation.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Why you donot store decimal values in database.md",
+                "file": "How django ninja serves default documentation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Why you donot store decimal values in database.md",
+                "file": "How django ninja serves default documentation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Why you donot store decimal values in database.md"
+                "file": "How django ninja serves default documentation.md"
               }
             }
           },
@@ -183,10 +195,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bb1865456467ac44",
+  "active": "302761cb34e8bd12",
   "lastOpenFiles": [
-    "databases/mongodb/Transactions.md",
+    "Securitypal/Documentation.md",
+    "How django ninja serves default documentation.md",
+    "Untitled.canvas",
+    "Untitled.md",
+    "What is OAuth?.md",
+    "Securitypal",
     "Why you donot store decimal values in database.md",
+    "databases/mongodb/Transactions.md",
     "Pasted image 20240509140441.png",
     "Pasted image 20240509140353.png",
     "Pasted image 20240509140308.png",
@@ -214,18 +232,12 @@
     "databases/mongodb/files",
     "databases/mongodb/files/Pasted image 20231112100831.png",
     "2023-11-12.md",
-    "Untitled.canvas",
     "Pasted image 20230831181838.png",
     "databases/mongodb",
     "databases",
     "next/Introduction to NextJs.md",
     "next/Next-auth.md",
-    "What is OAuth?.md",
-    "Google API Authorization and Authentication.md",
-    "devops/Networking/OSI Model.md",
     "Pasted image 20230831173348.png",
-    "react-query/Note on React Query.md",
-    "react/Why you shouldn't use local storage for storing user session.md",
     "next",
     "nest",
     "react-query",
