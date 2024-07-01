@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d7e0e63409e1a8eb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Securitypal/issues/11401.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Securitypal/Public Facing URLS.md",
+                "file": "Securitypal/issues/11401.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Securitypal/Public Facing URLS.md",
+                "file": "Securitypal/issues/11401.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Securitypal/Public Facing URLS.md"
+                "file": "Securitypal/issues/11401.md"
               }
             }
           },
@@ -171,8 +183,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ef13f5ac8a5b1ccb",
+  "active": "d7e0e63409e1a8eb",
   "lastOpenFiles": [
+    "Securitypal/issues/11401.md",
+    "Securitypal/issues",
     "Securitypal/How django ninja serves default documentation.md",
     "Securitypal/Public Facing URLS.md",
     "Securitypal/API Documentation.md",
@@ -213,7 +227,6 @@
     "databases/mongodb",
     "databases",
     "next/Introduction to NextJs.md",
-    "next/Next-auth.md",
     "Pasted image 20230831173348.png",
     "next",
     "nest",
