@@ -20,31 +20,19 @@
             }
           },
           {
-            "id": "ef13f5ac8a5b1ccb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Securitypal/Public Facing URLS.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "d7e0e63409e1a8eb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Securitypal/issues/11401.md",
+                "file": "Securitypal/issues/11385.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Securitypal/issues/11401.md",
+                "file": "Securitypal/issues/11385.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Securitypal/issues/11401.md",
+                "file": "Securitypal/issues/11385.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Securitypal/issues/11401.md"
+                "file": "Securitypal/issues/11385.md"
               }
             }
           },
@@ -186,9 +174,10 @@
   "active": "d7e0e63409e1a8eb",
   "lastOpenFiles": [
     "Securitypal/issues/11401.md",
-    "Securitypal/issues",
+    "Securitypal/issues/11385.md",
     "Securitypal/How django ninja serves default documentation.md",
     "Securitypal/Public Facing URLS.md",
+    "Securitypal/issues",
     "Securitypal/API Documentation.md",
     "devops/docker/ReadMe.md",
     "devops/Continuous-Integration/ReadMe.md",
@@ -226,7 +215,6 @@
     "Pasted image 20230831181838.png",
     "databases/mongodb",
     "databases",
-    "next/Introduction to NextJs.md",
     "Pasted image 20230831173348.png",
     "next",
     "nest",
