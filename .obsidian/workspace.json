@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Securitypal/issues/11385.md",
+                "file": "Securitypal/issues/11441.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Securitypal/issues/11385.md",
+                "file": "Securitypal/issues/11441.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Securitypal/issues/11385.md",
+                "file": "Securitypal/issues/11441.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Securitypal/issues/11385.md"
+                "file": "Securitypal/issues/11441.md"
               }
             }
           },
@@ -173,8 +173,11 @@
   },
   "active": "d7e0e63409e1a8eb",
   "lastOpenFiles": [
-    "Securitypal/issues/11401.md",
+    "Pasted image 20240704194323.png",
+    "Pasted image 20240704193841.png",
     "Securitypal/issues/11385.md",
+    "Securitypal/issues/11441.md",
+    "Securitypal/issues/11401.md",
     "Securitypal/How django ninja serves default documentation.md",
     "Securitypal/Public Facing URLS.md",
     "Securitypal/issues",
@@ -208,14 +211,11 @@
     "devops/docker/Docker networking.md",
     "devops/docker/Docker Layered Architecture.md",
     "concurrency and parallelism.md",
-    "databases/mongodb/Introduction to Mongodb.md",
     "databases/mongodb/files",
     "databases/mongodb/files/Pasted image 20231112100831.png",
-    "2023-11-12.md",
     "Pasted image 20230831181838.png",
     "databases/mongodb",
     "databases",
-    "Pasted image 20230831173348.png",
     "next",
     "nest",
     "react-query",
