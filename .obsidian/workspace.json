@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "84cbd5dd08441922",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Securitypal/How django ninja serves default documentation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "d7e0e63409e1a8eb",
             "type": "leaf",
             "state": {
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -174,12 +161,12 @@
   "active": "d7e0e63409e1a8eb",
   "lastOpenFiles": [
     "Securitypal/issues/11441.md",
+    "Securitypal/How django ninja serves default documentation.md",
     "Securitypal/issues/11440.md",
     "Pasted image 20240704194323.png",
     "Pasted image 20240704193841.png",
     "Securitypal/issues/11385.md",
     "Securitypal/issues/11401.md",
-    "Securitypal/How django ninja serves default documentation.md",
     "Securitypal/Public Facing URLS.md",
     "Securitypal/issues",
     "Securitypal/API Documentation.md",
