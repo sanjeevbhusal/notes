@@ -155,13 +155,17 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
   "active": "d7e0e63409e1a8eb",
   "lastOpenFiles": [
-    "Securitypal/issues/11441.md",
+    "Untitled.canvas",
     "Securitypal/issues/11440.md",
+    "Excalidraw/Drawing 2024-07-07 10.30.40.excalidraw.md",
+    "Excalidraw",
+    "Securitypal/issues/11441.md",
     "Securitypal/How django ninja serves default documentation.md",
     "Pasted image 20240704194323.png",
     "Pasted image 20240704193841.png",
@@ -173,7 +177,6 @@
     "devops/docker/ReadMe.md",
     "devops/Continuous-Integration/ReadMe.md",
     "databases/mongodb/Transactions.md",
-    "Untitled.canvas",
     "What is OAuth?.md",
     "Securitypal",
     "Why you donot store decimal values in database.md",
@@ -197,15 +200,12 @@
     "devops/docker/manager-worker-nodes.png",
     "devops/docker/docker-cheatsheet.png",
     "devops/docker/Docker networking.md",
-    "devops/docker/Docker Layered Architecture.md",
-    "concurrency and parallelism.md",
     "databases/mongodb/files",
     "databases/mongodb/files/Pasted image 20231112100831.png",
     "databases/mongodb",
     "databases",
     "next",
     "nest",
-    "react-query",
-    "react"
+    "react-query"
   ]
 }
