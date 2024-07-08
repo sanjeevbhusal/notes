@@ -15,6 +15,11 @@ Now,
 
 Now run `python manage.py migrate` command. the output of this command will tell you that there are no migrations to run. This is true since all we did was to delete existing migration from code and updated the squashed migration file to be a normal migration file.  
 
-When you run `python manage.py migrate` command, django will compare the last applied migration from `django_migrations` table to see the new migrations added to your code. Then, django will apply only the updated migrations to the database and also update the `django_migrations` table to update the recent migration files.
+When you run `python manage.py migrate` command, 
+- Django will get all the applied migrations information  from `django_migrations` table.
+- Django will then get all the migration files from the code. 
+- Django will compare if the records in `django_migrations` are exactly same as migration files in code including dependencies. 
+- If `django_migrations` has record that is not present in the code, 
+- available in the latest django will compare the last applied migration from `django_migrations` table to see the new migrations added to your code. Then, django will apply only the updated migrations to the database and also update the `django_migrations` table to update the recent migration files.
 
 So, when you remove the existing migration files from your database and apply python manage.py migrate, you will see no changes made. 
