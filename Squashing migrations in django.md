@@ -18,8 +18,13 @@ Now run `python manage.py migrate` command. the output of this command will tell
 When you run `python manage.py migrate` command, 
 - Django will get all the applied migrations information  from `django_migrations` table.
 - Django will then get all the migration files from the code. 
-- Django will compare if the records in `django_migrations` are exactly same as migration files in code including dependencies. 
-- If `django_migrations` has record that is not present in the code, 
-- available in the latest django will compare the last applied migration from `django_migrations` table to see the new migrations added to your code. Then, django will apply only the updated migrations to the database and also update the `django_migrations` table to update the recent migration files.
+- Django will then compare if the migration files in code are present in `django_migration` table or not. 
+- If a migration file is present in code but not `django_migrations`, django will then apply that migration and also update the `django_migrations` table.
+- If  `django_migrations` has record that is not present in the code, nothing happens. Django just checks if all migration files are present in `django_migrations` table and not vice-versa. 
 
-So, when you remove the existing migration files from your database and apply python manage.py migrate, you will see no changes made. 
+Lets see the same scenario with squashed migrations.
+
+- You run `python manage.py squashmigrations <appname> 0004`. This will create a migration file that has all the operations of all the migration files that are squashed. Lets call the migration file as `0001_squashed_file`
+- You run `python manage.py migrate` command. Like described above, this will compare all the migration files in code with `django_migrations` table. Since the new squashed migration file is not present in `django_migrations` table, it should be applied to database and also added to `django_migrations` table. However, if you apply the migration file, you will get a error since all the operations had already been applied by the files that were squashed. Hence, django won't apply the changes to database and only add the file to `django_migrations`. As discussed above, django knows that this is a squashed migration file due to the presence of `replaces` field.
+- Now, we delete all the normal migration files that are referenced by the squashed migration file and remove the replaces field of the squashed migration file. 
+- Now, we run `python manage.py migrate` command. Like described above, this will compare all the migration files in code with `django_migrations` table. Since we removed all the squashed migration files
