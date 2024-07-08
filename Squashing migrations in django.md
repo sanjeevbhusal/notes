@@ -13,4 +13,8 @@ Now,
 - remove all the migrations files from code that this replaces array contains. 
 - Then remove the replaces field from this squashed migration. This marks the migration as a normal migration and not a squashed migration.
 
-Now run `python manage.py migrate` command. he output of this command will tell you that there are no migrations to run. This is true since we just deleted existing migration from code and updated the squashed migration file to be a normal migration file.  
+Now run `python manage.py migrate` command. the output of this command will tell you that there are no migrations to run. This is true since all we did was to delete existing migration from code and updated the squashed migration file to be a normal migration file.  
+
+When you run `python manage.py migrate` command, django will compare the last applied migration from `django_migrations` table to see the new migrations added to your code. Then, django will apply only the updated migrations to the database and also update the `django_migrations` table to update the recent migration files.
+
+So, when you remove the existing migration files from your database and apply python manage.py migrate, you will see no changes made. 
