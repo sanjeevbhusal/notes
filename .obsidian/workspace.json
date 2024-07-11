@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Squashing migrations in django.md",
+                "file": "Securitypal/Redux.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Squashing migrations in django.md",
+                "file": "Securitypal/Redux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Squashing migrations in django.md",
+                "file": "Securitypal/Redux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Squashing migrations in django.md"
+                "file": "Securitypal/Redux.md"
               }
             }
           },
@@ -174,9 +174,10 @@
   },
   "active": "cb1a13058137ca0d",
   "lastOpenFiles": [
+    "Securitypal/Squashing migrations in django.md",
+    "Securitypal/Redux.md",
     "Pasted image 20240708104641.png",
     "Securitypal/issues/11440.md",
-    "Squashing migrations in django.md",
     "Untitled.canvas",
     "Excalidraw/Drawing 2024-07-07 10.30.40.excalidraw.md",
     "Excalidraw",
@@ -215,7 +216,6 @@
     "devops/docker/manager-worker-nodes.png",
     "devops/docker/docker-cheatsheet.png",
     "databases/mongodb/files",
-    "databases/mongodb/files/Pasted image 20231112100831.png",
     "databases/mongodb",
     "databases",
     "next",
