@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Securitypal/issues/11440.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cb1a13058137ca0d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Securitypal/Redux.md",
+                "file": "Securitypal/issues/11723.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Securitypal/Redux.md",
+                "file": "Securitypal/issues/11723.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Securitypal/Redux.md",
+                "file": "Securitypal/issues/11723.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Securitypal/Redux.md"
+                "file": "Securitypal/issues/11723.md"
               }
             }
           },
@@ -172,12 +159,14 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "cb1a13058137ca0d",
+  "active": "d7e0e63409e1a8eb",
   "lastOpenFiles": [
-    "Securitypal/Squashing migrations in django.md",
-    "Securitypal/Redux.md",
-    "Pasted image 20240708104641.png",
+    "Pasted image 20240720093249.png",
     "Securitypal/issues/11440.md",
+    "Securitypal/issues/11723.md",
+    "Securitypal/Redux.md",
+    "Securitypal/Squashing migrations in django.md",
+    "Pasted image 20240708104641.png",
     "Untitled.canvas",
     "Excalidraw/Drawing 2024-07-07 10.30.40.excalidraw.md",
     "Excalidraw",
@@ -209,8 +198,6 @@
     "devops/docker/Docker Storage Drivers.md",
     "machine-learning/Topic-2 (machine-learning-workflow)/Note-1.md",
     "machine-learning/Topic-1 (introduction-to-machine-learning)/Note-2 (types of machine learning).md",
-    "devops/kubernetes/Container Orchestration In a Nutshell.md",
-    "devops/gitlab-ci-cd/notes/Gitlab-CI.md",
     "devops/docker/manager-worker-nodes-4.png",
     "devops/docker/manager-worker-nodes-3.png",
     "devops/docker/manager-worker-nodes.png",
