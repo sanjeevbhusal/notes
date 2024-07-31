@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Securitypal/issues/11723.md",
+                "file": "Securitypal/Slack Workflow.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Securitypal/issues/11723.md",
+                "file": "Securitypal/Slack Workflow.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Securitypal/issues/11723.md",
+                "file": "Securitypal/Slack Workflow.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Securitypal/issues/11723.md"
+                "file": "Securitypal/Slack Workflow.md"
               }
             }
           },
@@ -161,9 +161,10 @@
   },
   "active": "d7e0e63409e1a8eb",
   "lastOpenFiles": [
+    "Securitypal/issues/11723.md",
+    "Securitypal/Slack Workflow.md",
     "Pasted image 20240720093249.png",
     "Securitypal/issues/11440.md",
-    "Securitypal/issues/11723.md",
     "Securitypal/Redux.md",
     "Securitypal/Squashing migrations in django.md",
     "Pasted image 20240708104641.png",
@@ -201,7 +202,6 @@
     "devops/docker/manager-worker-nodes-4.png",
     "devops/docker/manager-worker-nodes-3.png",
     "devops/docker/manager-worker-nodes.png",
-    "devops/docker/docker-cheatsheet.png",
     "databases/mongodb/files",
     "databases/mongodb",
     "databases",
