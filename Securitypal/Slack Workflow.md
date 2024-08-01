@@ -21,7 +21,9 @@ What if you want to have a workflow that takes some user input in a form, then d
 - Second Step, Take the output of first step and make a api call to the endpoint.
 - Third Step, Take the output of second step and post it to a slack channel. 
 
-When should you create a single step or multiple step to complete a certain task ? If a task is very specific (such as calling your api) and sending response to a slack 
+When should you create a single step or multiple step to complete a certain task ? If a task is very specific (such as calling your api) and sending response to a slack channel, you can do this in a single step. However, you have to implement both api calling part and sending message to channel part. 
+
+Slack already provides a step to send message to a slack channel. If you want to use this, you need to have api calling part in one step and then send the output of that as a input to send message step. 
 
 
 
