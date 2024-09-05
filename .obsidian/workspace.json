@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Securitypal/issues/11292.md",
+                "file": "Securitypal/Slack App.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Securitypal/issues/11292.md",
+                "file": "Securitypal/Slack App.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Securitypal/issues/11292.md",
+                "file": "Securitypal/Slack App.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Securitypal/issues/11292.md"
+                "file": "Securitypal/Slack App.md"
               }
             }
           },
@@ -161,9 +161,10 @@
   },
   "active": "d7e0e63409e1a8eb",
   "lastOpenFiles": [
-    "Securitypal/issues/11385.md",
-    "Securitypal/issues/11292.md",
     "Securitypal/Slack Workflow.md",
+    "Securitypal/Slack App.md",
+    "Securitypal/issues/11292.md",
+    "Securitypal/issues/11385.md",
     "Securitypal/issues/11723.md",
     "Pasted image 20240720093249.png",
     "Securitypal/issues/11440.md",
@@ -198,7 +199,6 @@
     "devops/Serverless-Deployment/ReadMe.md",
     "Google Workspace API.md",
     "devops/docker/Docker Storage Drivers.md",
-    "machine-learning/Topic-2 (machine-learning-workflow)/Note-1.md",
     "devops/docker/manager-worker-nodes-4.png",
     "devops/docker/manager-worker-nodes-3.png",
     "devops/docker/manager-worker-nodes.png",
