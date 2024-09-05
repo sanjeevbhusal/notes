@@ -51,4 +51,12 @@ Like Events API, Web API is not available in socket mode. This makes sense since
 
 
 ### Tools and SDKS
-Slack provides a bunch of sdks and frameworks that help you buil
+Slack provides mostly 2 kind of sdks/framework that help you build your slack application. 
+- Slack SDK
+- Bolt SDK
+
+#### Slack SDKs
+Slack SDKs are basically wrappers around common functionality of slack such as sending a message, replying to a thread etc. You use the functions provided by these SDKs instead of calling the api yourself. 
+
+#### Bolt SDK
+Bolt SDK is a complete framework on building slack application. It handles much of the foundational step / boilerplate so you can focus on building the functionality. Bolt handles Installation of your application in a slack workspace. It handles OAuth Authentication during the installation. It provides wrappers around slack apis and functionality. For eg: If you want your app to listen to some events, you don't need to use Events API directly. Bolt provides a wrapper/abstraction around it. It also has retry and rate limiting logic built in.   
