@@ -25,10 +25,30 @@ Interactivity means having 2 way conversation between a slack application and a 
 There are multiple ways to trigger the interaction and multiple ways a app can respond to the interaction. 
 
 #### User Triggers the interaction
-- User can interact with your application by using app surface. As discussed above, app surface represents App Home, Modals and Messages. User can go to App Home and send a message in Messages tab. Or they can go to App Home and press some button in Home tab. 
-- User can interact with your application by 
+- User can interact with your application by using app surface. As discussed above, app surface represents App Home, Modals and Messages.
+	- User can go to App Home and send a message in Messages tab. Or they can go to App Home and press some button in Home tab. 
+	- User can interact with your application by sending a message in a slack channel where your app is also present. Your app can then respond to that message.
 - User can use slash commands exposed by your application. 
 #### Interaction gets Triggered without User input
 - Interactions can be scheduled at a fix time. For eg: Google calendar app posts a message in the Home Tab of App Surface at sharp 7 am. A interaction gets triggered at this time automatically and google calendar app responds by posting a message. This is like a cron job. 
 - Interactions can be initiated by external services. For eg: Everytime sentry catches a error, it sends the error to a slack channel. The error is sent via sentry slack application. A interaction gets triggered when sentry catches a error and the sentry slack app responds by posting a message. 
 - Interactions can be initiated because of some events. A user might join a channel in slack and that might trigger a interaction. A slack app can then respond with some welcome message. Although the user joined a channel and that's what caused the interaction, the joining user had no idea about the app. The user didnot directly interact with the application. 
+
+
+### APIS in Slack
+
+Slack has its APIs categorized into 2 parts.
+- Events API
+- Web API
+
+#### Events API
+This is how slack sends a message to your application. Your app tells slack the events it is interested in and slack will tell your application when the event occurs. You specific a http endpoint (eg: securitypal.com/api/slack/) and slack will send a request with all the details of the event to the endpoint. 
+When developing your app, your endpoint will be localhost. Since the endpoint cannot be reached via HTTP, you can instead setup a websocket connection. 
+
+#### The Web API
+This is how your app send a message to slack. If your app wants to send a message in a channel in slack workspace, you can use this api. 
+Like Events API, Web API is not available in socket mode. This makes sense since even if you are in development mode,  you can call slack's api endpoints.
+
+
+### Tools and SDKS
+Slack provides a bunch of sdks and frameworks that help you buil
