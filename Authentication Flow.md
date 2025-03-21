@@ -7,3 +7,6 @@ Once the access token expires, frontend sends a refresh token to get the new acc
 
 This approach ensures we balance usability with security. If the access token is compromised, the attacker only has a short window before the token expires. Since refresh token is only used to get new tokens, its exposed less and has a less chance of being compromised. without the refresh token, the attacker cannot get new tokens. This approach also ensures we have a way to invalidate the compromised Refresh Token. If the legitimate user continues using the app, he will request a new access token shortly. Since we are Rotating Refresh tokens, we blacklist existing refresh tokens when a new access token is requested. This immediately invalidates the compromised Refresh token. 
 
+https://django-rest-framework-simplejwt.readthedocs.io/en/latest/blacklist_app.html
+
+In order to know if a refresh token has been blacklisted, we need it to store it in database. Overtime we will have a lot of tokens that have been blacklisted. In order to clean those tokens, we also run a management command that cleans these tokens. The management command is run every day as a cron job.  
