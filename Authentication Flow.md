@@ -9,4 +9,10 @@ This approach ensures we balance usability with security. If the access token is
 
 https://django-rest-framework-simplejwt.readthedocs.io/en/latest/blacklist_app.html
 
-In order to know if a refresh token has been blacklisted, we need it to store it in database. Overtime we will have a lot of tokens that have been blacklisted. In order to clean those tokens, we also run a management command that cleans these tokens. The management command is run every day as a cron job.  
+In order to know if a refresh token has been blacklisted, we need it to store it in database. Overtime we will have a lot of tokens that have been blacklisted. In order to clean those tokens, we also run a management command that cleans these tokens. The management command is run every day as a cron job. 
+
+**In this flow, is it possible to remove all the tokens such that every logged in device will be logged out ?**
+It is not possible to log out every device instantly. We can blacklist all the refresh tokens which will ensure we do not generate a new refresh/access token pair next time it is requested. However, we do not have a mechanism to blacklist access tokens. access tokens are the ones that are used to authenticate a user in an endpoint. These tokens are short-lived. When the token expires and user requests a new access token, the server will reject the request since the current refresh token has already been blacklisted. 
+
+We donot check if a token is valid or not in every request. This increases the request speed. But this means we also can't detect if the associated refresh token has been blacklisted. **We are trading security for speed.**
+Fortunately our access tokens are short lived (10 minutes), so once the time passes, the user will be logged out from all devices. The user can only login again by providing valid password. 
