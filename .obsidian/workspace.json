@@ -8,35 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d7e0e63409e1a8eb",
+            "id": "b4847b60515b4ae3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Securitypal/Slack App.md",
+                "file": "machine-learning/Embeddings.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Slack App"
-            }
-          },
-          {
-            "id": "edc90b9d983e372c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Authentication Flow.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Authentication Flow"
+              "title": "Embeddings"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -193,15 +178,17 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "edc90b9d983e372c",
+  "active": "b4847b60515b4ae3",
   "lastOpenFiles": [
+    "Pasted image 20250604135229.png",
+    "Securitypal/Slack App.md",
     "Authentication Flow.md",
+    "machine-learning/Embeddings.md",
     "Generative AI/Untitled 1.md",
     "Untitled/ma",
     "Generative AI",
     "Untitled.md",
     "Securitypal/Slack Workflow.md",
-    "Securitypal/Slack App.md",
     "Securitypal/issues/11292.md",
     "Securitypal/issues/11385.md",
     "Securitypal/issues/11723.md",
@@ -233,8 +220,6 @@
     "scratch/When a comment is added to a request thread, we create notifications..md",
     "scratch",
     "devops/docker/Docker file storage.md",
-    "devops/docker/docker volume.md",
-    "devops/docker/Docker Container Isolation.md",
     "devops/docker/manager-worker-nodes-4.png",
     "devops/docker/manager-worker-nodes-3.png",
     "devops/docker/manager-worker-nodes.png",
