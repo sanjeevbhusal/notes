@@ -22,3 +22,11 @@ In summary indexing contains 3 main steps:
 - Storing: Take the embeddings of the documents and store it in some sort of vector storage.
 
 ![[Pasted image 20250604144657.png]]
+
+**Retrieving**
+When the user sends a search query, retrieve relevant documents (document split). For this, generate query embedding and perform a similarity search. 
+
+**Generate**
+Craft a prompt combining users query, relevant documents and additional instructions and send the prompt to a LLM. 
+
+![[Pasted image 20250604145429.png]]
