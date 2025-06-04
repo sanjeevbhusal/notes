@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "machine-learning/Embeddings.md",
+                "file": "machine-learning/RAG.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Embeddings"
+              "title": "RAG"
             }
           }
         ]
@@ -180,10 +180,12 @@
   },
   "active": "b4847b60515b4ae3",
   "lastOpenFiles": [
+    "Pasted image 20250604144657.png",
+    "machine-learning/Embeddings.md",
+    "machine-learning/RAG.md",
     "Pasted image 20250604135229.png",
     "Securitypal/Slack App.md",
     "Authentication Flow.md",
-    "machine-learning/Embeddings.md",
     "Generative AI/Untitled 1.md",
     "Untitled/ma",
     "Generative AI",
@@ -219,10 +221,8 @@
     "Pasted image 20240509140308.png",
     "scratch/When a comment is added to a request thread, we create notifications..md",
     "scratch",
-    "devops/docker/Docker file storage.md",
     "devops/docker/manager-worker-nodes-4.png",
     "devops/docker/manager-worker-nodes-3.png",
-    "devops/docker/manager-worker-nodes.png",
     "databases/mongodb/files",
     "databases/mongodb",
     "databases",
