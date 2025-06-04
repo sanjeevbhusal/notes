@@ -16,7 +16,16 @@ Embeddings is generated using Embeddings Model. These models are specifically de
 
 Embeddings model embed documents and query text differently. documents is the context i.e. the data upon which further searches will be made and query is the actual asked question. 
 
+**Search algorithms**
 
 You can think of each embedding as a set of coordinates. Eg: [10].  This coordinates represent the meaning of its corresponding text. text that are similar to each other will have similar or close to coordinates value. 
-Read more: https://python.langchain.com/docs/concepts/embedding_models/
 
+The comparison for how close 2 embeddings are with each other can be done via various algorithms. 
+
+- **Cosine Similarity**: Measures the cosine of the angle between two vectors.
+- **Euclidean Distance**: Measures the straight-line distance between two points.
+- **Dot Product**: Measures the projection of one vector onto another.
+
+you should choose the metric based upon the model used. For Eg: OpenAI suggests using Cosine Similarity when dealing with their models. 
+
+Read more: https://python.langchain.com/docs/concepts/embedding_models/
