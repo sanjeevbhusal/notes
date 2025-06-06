@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "machine-learning/RAG.md",
+                "file": "machine-learning/Embeddings.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RAG"
+              "title": "Embeddings"
             }
           }
         ]
@@ -180,10 +180,10 @@
   },
   "active": "b4847b60515b4ae3",
   "lastOpenFiles": [
+    "machine-learning/RAG.md",
     "Pasted image 20250604145429.png",
     "Pasted image 20250604144657.png",
     "machine-learning/Embeddings.md",
-    "machine-learning/RAG.md",
     "Pasted image 20250604135229.png",
     "Securitypal/Slack App.md",
     "Authentication Flow.md",
@@ -222,7 +222,6 @@
     "Pasted image 20240509140308.png",
     "scratch/When a comment is added to a request thread, we create notifications..md",
     "scratch",
-    "devops/docker/manager-worker-nodes-4.png",
     "databases/mongodb/files",
     "databases/mongodb",
     "databases",
